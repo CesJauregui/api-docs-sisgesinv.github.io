@@ -1,0 +1,28 @@
+.nav-link{
+    display: inline-block;
+}
+
+.main{
+    padding: 50px 20%;
+}
+
+code,
+pre{
+    font-family: 'Source Code Pro', monospace;
+}
+
+.accordion-button-POST,.accordion-button-POST:not(.collapse){
+    background-color: #ffc107;
+}
+
+.accordion-button-GET,.accordion-button-GET:not(.collapse){
+    background-color: #198754;
+}
+
+.accordion-button-PUT, .accordion-button-PUT:not(.collapse){
+    background-color: #0d6efd;
+}
+
+.accordion-button-DELETE, .accordion-button-DELETE:not(.collapse){
+    background-color: #ed4141;
+}

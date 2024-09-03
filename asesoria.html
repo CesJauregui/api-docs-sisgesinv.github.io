@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Api Docs - Sisgesinv</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div class="navbar"></div>
+    <section class="main">
+      <div class="alert alert-dark" role="alert">
+        <h5>Asesorías</h5>
+      </div>
+      <div class="accordion" id="accordionPanelsStayOpenAdvisory">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button accordion-button-GET collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseAdvisory1"
+              aria-expanded="false"
+              aria-controls="panelsStayOpen-collapseAdvisory1"
+            >
+              Obtener todas las asesorías
+            </button>
+          </h2>
+          <div
+            id="panelsStayOpen-collapseAdvisory1"
+            class="accordion-collapse collapse"
+          >
+            <div class="accordion-body">
+              <div class="row g-3">
+                <div class="col-auto">
+                  <button class="btn btn-success mb-3">GET</button>
+                </div>
+                <div class="col-10">
+                  <input
+                    type="url"
+                    class="form-control"
+                    value="{{base_url}}/api/advisory"
+                    readonly
+                  />
+                </div>
+              </div>
+              <div class="row g-1">
+                <h6>Request</h6>
+                <p>Accept: application/json</p>
+                <h6>Response</h6>
+                <pre class="bg-body-secondary"><code class="json">
+                    {
+                        "data": [
+                            {
+                                "id": 2,
+                                "degree_processes_id": 2,
+                                "inscription_id": 2,
+                                "reception_date_faculty": "01-01-2024",
+                                "payment_date": "01-01-2024",
+                                "approval_date_udi": "01-01-2024",
+                                "shipment_date_secretary": "01-01-2024",
+                                "report": "012-2024-UDI-FCS-UCH",  
+                                "resolution_date": "29-06-2022",
+                                "status": "En Asesoría",
+                                "reviewer": [
+                                    {
+                                        "id": 14,
+                                        "name": "Juan",
+                                        "surnames": "Gomez Ramirez",
+                                        "code": 12161658,
+                                        "email": "juan@test.com",
+                                        "phone": 984575157,
+                                        "orcid": null,
+                                        "cip": null
+                                    }
+                                ],
+                                "degree_processes": {
+                                    "id": 2,
+                                    "file": 122221,
+                                    "professional_school": "IET21",
+                                    "thesis_project_title": "Ingeniería de SISTEMAS 202421",
+                                    "office_number": "123-11321",
+                                    "resolution_number": "112-11321",
+                                    "general_status": "Revisión de Tesis",
+                                    "graduates": [
+                                        {
+                                            "id": 9,
+                                            "name": "Daniela Agustina Leal Nieves Hijo",
+                                            "surnames": "Carbajal",
+                                            "email": "wrobles@example.com",
+                                            "phone": 951812965,
+                                            "code": 37726580
+                                        },
+                                        {
+                                            "id": 10,
+                                            "name": "Ana Sofía Luciana Rosales García",
+                                            "surnames": "Muro",
+                                            "email": "lucia.rincon@example.org",
+                                            "phone": 723289061,
+                                            "code": 17155132
+                                        }
+                                    ]
+                                }
+                            },...
+                        ]
+                    }  
+                </code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button accordion-button-GET collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseAdvisory2"
+              aria-expanded="false"
+              aria-controls="panelsStayOpen-collapseAdvisory2"
+            >
+              Obtener una asesoría por ID
+            </button>
+          </h2>
+          <div
+            id="panelsStayOpen-collapseAdvisory2"
+            class="accordion-collapse collapse"
+          >
+            <div class="accordion-body">
+              <div class="row g-3">
+                <div class="col-auto">
+                  <button class="btn btn-success mb-3">GET</button>
+                </div>
+                <div class="col-10">
+                  <input
+                    type="url"
+                    class="form-control"
+                    value="{{base_url}}/api/advisory/{idAdvisory}"
+                    readonly
+                  />
+                </div>
+              </div>
+              <div class="row g-1">
+                <h6>Request</h6>
+                <p>Accept: application/json</p>
+                <h6>Response</h6>
+                <pre class="bg-body-secondary"><code class="json">
+                    {
+                        "data": {
+                            "id": 2,
+                            "degree_processes_id": 2,
+                            "inscription_id": 2,
+                            "reception_date_faculty": "01-01-2024",
+                            "payment_date": "01-01-2024",
+                            "approval_date_udi": "01-01-2024",
+                            "shipment_date_secretary": "01-01-2024",
+                            "report": "012-2024-UDI-FCS-UCH",
+                            "resolution_date": "29-06-2022",
+                            "status": "En Asesoría",
+                            "reviewer": [
+                                {
+                                    "id": 14,
+                                    "name": "Juan",
+                                    "surnames": "Gomez Ramirez",
+                                    "code": 12161658,
+                                    "email": "juan@test.com",
+                                    "phone": 984575157,
+                                    "orcid": null,
+                                    "cip": null
+                                }
+                            ],
+                            "degree_processes": {
+                                "id": 2,
+                                "file": 122221,
+                                "professional_school": "IET21",
+                                "thesis_project_title": "Ingeniería de SISTEMAS 202421",
+                                "office_number": "123-11321",
+                                "resolution_number": "112-11321",
+                                "general_status": "Revisión de Tesis",
+                                "graduates": [
+                                    {
+                                        "id": 9,
+                                        "name": "Daniela Agustina Leal Nieves Hijo",
+                                        "surnames": "Carbajal",
+                                        "email": "wrobles@example.com",
+                                        "phone": 951812965,
+                                        "code": 37726580
+                                    },
+                                    {
+                                        "id": 10,
+                                        "name": "Ana Sofía Luciana Rosales García",
+                                        "surnames": "Muro",
+                                        "email": "lucia.rincon@example.org",
+                                        "phone": 723289061,
+                                        "code": 17155132
+                                    }
+                                ]
+                            }
+                        }
+                    }         
+                </code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button accordion-button-PUT collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseAdvisory3"
+              aria-expanded="false"
+              aria-controls="panelsStayOpen-collapseAdvisory3"
+            >
+              Actualizar una asesoría
+            </button>
+          </h2>
+          <div
+            id="panelsStayOpen-collapseAdvisory3"
+            class="accordion-collapse collapse"
+          >
+            <div class="accordion-body">
+              <div class="row g-3">
+                <div class="col-auto">
+                  <button class="btn btn-primary mb-3">PUT</button>
+                </div>
+                <div class="col-10">
+                  <input
+                    type="url"
+                    class="form-control"
+                    value="{{base_url}}/api/advisory/{idAdvisory}"
+                    readonly
+                  />
+                </div>
+              </div>
+              <div class="row g-1">
+                <h6>Request</h6>
+                <p>Accept: application/json</p>
+                <h6>Body</h6>
+                <pre class="bg-body-secondary"><code class="json">
+                    {
+                        "resolution_date" : "29-06-2022",
+                        "user_id" : 14 // Enviar el user_id obligatoriamente
+                    }
+                </code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button accordion-button-PUT collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseAdvisory4"
+              aria-expanded="false"
+              aria-controls="panelsStayOpen-collapseAdvisory4"
+            >
+              Actualizar estado de asesoría
+            </button>
+          </h2>
+          <div
+            id="panelsStayOpen-collapseAdvisory4"
+            class="accordion-collapse collapse"
+          >
+            <div class="accordion-body">
+              <div class="row g-3">
+                <div class="col-auto">
+                  <button class="btn btn-primary mb-3">PUT</button>
+                </div>
+                <div class="col-10">
+                  <input
+                    type="url"
+                    class="form-control"
+                    value="{{base_url}}/api/advisory/{idAdvisory}/status"
+                    readonly
+                  />
+                </div>
+              </div>
+              <div class="row g-1">
+                <h6>Request</h6>
+                <p>Accept: application/json</p>
+                <h6>Body</h6>
+                <pre class="bg-body-secondary"><code class="json">
+                    {
+                        "status" : "Aprobado"
+                    }                   
+                </code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr />
+
+      <div class="alert alert-dark" role="alert">
+        <h5>Tareas asesorías</h5>
+      </div>
+      <div class="accordion" id="accordionPanelsStayOpenTask">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button accordion-button-POST"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseTask1"
+              aria-expanded="true"
+              aria-controls="panelsStayOpen-collapseTask1"
+            >
+              Nueva tarea
+            </button>
+          </h2>
+          <div
+            id="panelsStayOpen-collapseTask1"
+            class="accordion-collapse collapse"
+          >
+            <div class="accordion-body">
+              <div class="row g-3">
+                <div class="col-auto">
+                  <button class="btn btn-warning mb-3">POST</button>
+                </div>
+                <div class="col-10">
+                  <input
+                    type="url"
+                    class="form-control"
+                    value="{{base_url}}/api/advisory/{idAdvisory}/tasks"
+                    readonly
+                  />
+                </div>
+              </div>
+              <div class="row g-1">
+                <h6>Request</h6>
+                <p>Accept: application/json</p>
+                <h6>Body</h6>
+                <pre class="bg-body-secondary"><code class="json">
+                  {
+                    "description" : "tarea 1 en la asesoria 1"
+                  }
+                </code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button accordion-button-GET collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseTask2"
+              aria-expanded="false"
+              aria-controls="panelsStayOpen-collapseTask2"
+            >
+              Obtener todas las tareas por asesoría
+            </button>
+          </h2>
+          <div
+            id="panelsStayOpen-collapseTask2"
+            class="accordion-collapse collapse"
+          >
+            <div class="accordion-body">
+              <div class="row g-3">
+                <div class="col-auto">
+                  <button class="btn btn-success mb-3">GET</button>
+                </div>
+                <div class="col-10">
+                  <input
+                    type="url"
+                    class="form-control"
+                    value="{{base_url}}/api/advisory/{idAdvisory}/tasks"
+                    readonly
+                  />
+                </div>
+              </div>
+              <div class="row g-1">
+                <h6>Request</h6>
+                <p>Accept: application/json</p>
+                <h6>Response</h6>
+                <pre class="bg-body-secondary"><code class="json">
+                    {
+                        "data": [
+                            {
+                                "description": "Tarea 1 para asesoría 1",
+                                "status": 0,
+                                "created_at": "02-09-2024 11:49:19",
+                                "user": {
+                                    "id": 1,
+                                    "name": "Cesar",
+                                    "surnames": "Jauregui"
+                                }
+                            },...
+                        ]
+                    }
+                </code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button accordion-button-PUT collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseTask3"
+              aria-expanded="false"
+              aria-controls="panelsStayOpen-collapseTask3"
+            >
+              Actualizar una tarea
+            </button>
+          </h2>
+          <div
+            id="panelsStayOpen-collapseTask3"
+            class="accordion-collapse collapse"
+          >
+            <div class="accordion-body">
+              <div class="row g-3">
+                <div class="col-auto">
+                  <button class="btn btn-primary mb-3">PUT</button>
+                </div>
+                <div class="col-10">
+                  <input
+                    type="url"
+                    class="form-control"
+                    value="{{base_url}}/api/advisory/{idAdvisory}/tasks/{idTask}"
+                    readonly
+                  />
+                </div>
+              </div>
+              <div class="row g-1">
+                <h6>Request</h6>
+                <p>Accept: application/json</p>
+                <h6>Body</h6>
+                <pre class="bg-body-secondary"><code class="json">
+                    /*
+                    - Mandar description y status siempre asi se actualice solo uno de ellos
+                    - status: true (tarea cerrada) / false (tarea abierta)
+                    */
+
+                    {
+                        "description" : "Se actualiza  2 la tarea 1 de la asesoría 22222",
+                        "status" : false
+                    }
+                </code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button accordion-button-DELETE collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseTask4"
+              aria-expanded="false"
+              aria-controls="panelsStayOpen-collapseTask4"
+            >
+              Eliminar una tarea
+            </button>
+          </h2>
+          <div
+            id="panelsStayOpen-collapseTask4"
+            class="accordion-collapse collapse"
+          >
+            <div class="accordion-body">
+              <div class="row g-3">
+                <div class="col-auto">
+                  <button class="btn btn-danger mb-3">DELETE</button>
+                </div>
+                <div class="col-10">
+                  <input
+                    type="url"
+                    class="form-control"
+                    value="{{base_url}}/api/advisory/{idAdvisory}/tasks/{idTask}"
+                    readonly
+                  />
+                </div>
+              </div>
+              <div class="row g-1">
+                <h6>Request</h6>
+                <p>Accept: application/json</p>
+                <h6>Response</h6>
+                <pre class="bg-body-secondary"><code class="json">
+                </code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr />
+
+      <div class="alert alert-dark" role="alert">
+        <h5>Observaciones asesorías</h5>
+      </div>
+      <div class="accordion" id="accordionPanelsStayOpenObservation">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button accordion-button-POST"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseObservation1"
+              aria-expanded="true"
+              aria-controls="panelsStayOpen-collapseObservation1"
+            >
+              Nueva Observación
+            </button>
+          </h2>
+          <div
+            id="panelsStayOpen-collapseObservation1"
+            class="accordion-collapse collapse"
+          >
+            <div class="accordion-body">
+              <div class="row g-3">
+                <div class="col-auto">
+                  <button class="btn btn-warning mb-3">POST</button>
+                </div>
+                <div class="col-10">
+                  <input
+                    type="url"
+                    class="form-control"
+                    value="{{base_url}}/api/advisory/{idAdvisory}/observations"
+                    readonly
+                  />
+                </div>
+              </div>
+              <div class="row g-1">
+                <h6>Request</h6>
+                <p>Accept: application/json</p>
+                <h6>Body</h6>
+                <pre class="bg-body-secondary"><code class="json">
+                    /*
+                        Solo cuando se cambia el estado  de la asesoría se agrega el estatus.
+                    */
+
+                    {
+                        "description" : "se agrega descripción 1 a asesoría 2"
+                    }               
+                </code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button accordion-button-GET collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseObservation2"
+              aria-expanded="false"
+              aria-controls="panelsStayOpen-collapseObservation2"
+            >
+              Obtener todas las observaciones por asesoría
+            </button>
+          </h2>
+          <div
+            id="panelsStayOpen-collapseObservation2"
+            class="accordion-collapse collapse"
+          >
+            <div class="accordion-body">
+              <div class="row g-3">
+                <div class="col-auto">
+                  <button class="btn btn-success mb-3">GET</button>
+                </div>
+                <div class="col-10">
+                  <input
+                    type="url"
+                    class="form-control"
+                    value="{{base_url}}/api/advisory/{idAdvisory}/observations"
+                    readonly
+                  />
+                </div>
+              </div>
+              <div class="row g-1">
+                <h6>Request</h6>
+                <p>Accept: application/json</p>
+                <h6>Response</h6>
+                <pre class="bg-body-secondary"><code class="json">
+                    {
+                        "data": [
+                            {
+                                "description": "se agrega descripción 1 a asesoría 1",
+                                "status": "",
+                                "shipment_date_secretary": "00-00-0000",
+                                "created_at": "31-08-2024 17:39:18",
+                                "user": {
+                                    "id": 1,
+                                    "name": "Cesar",
+                                    "surnames": "Jauregui"
+                                }
+                            }
+                        ]
+                    }               
+                </code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button accordion-button-PUT collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseObservation3"
+              aria-expanded="false"
+              aria-controls="panelsStayOpen-collapseObservation3"
+            >
+              Actualizar una observación
+            </button>
+          </h2>
+          <div
+            id="panelsStayOpen-collapseObservation3"
+            class="accordion-collapse collapse"
+          >
+            <div class="accordion-body">
+              <div class="row g-3">
+                <div class="col-auto">
+                  <button class="btn btn-primary mb-3">PUT</button>
+                </div>
+                <div class="col-10">
+                  <input
+                    type="url"
+                    class="form-control"
+                    value="{{base_url}}/api/advisory/{idAdvisory}/observations/{idObservation}"
+                    readonly
+                  />
+                </div>
+              </div>
+              <div class="row g-1">
+                <h6>Request</h6>
+                <p>Accept: application/json</p>
+                <h6>Body</h6>
+                <pre class="bg-body-secondary"><code class="json">
+                  {
+                    "description" : "Tarea actualizada 1"
+                  }
+                </code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button accordion-button-DELETE collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseObservation4"
+              aria-expanded="false"
+              aria-controls="panelsStayOpen-collapseObservation4"
+            >
+              Eliminar una observación
+            </button>
+          </h2>
+          <div
+            id="panelsStayOpen-collapseObservation4"
+            class="accordion-collapse collapse"
+          >
+            <div class="accordion-body">
+              <div class="row g-3">
+                <div class="col-auto">
+                  <button class="btn btn-danger mb-3">DELETE</button>
+                </div>
+                <div class="col-10">
+                  <input
+                    type="url"
+                    class="form-control"
+                    value="{{base_url}}/api/advisory/{idAdvisory}/observations/{idObservation}"
+                    readonly
+                  />
+                </div>
+              </div>
+              <div class="row g-1">
+                <h6>Request</h6>
+                <p>Accept: application/json</p>
+                <h6>Response</h6>
+                <pre class="bg-body-secondary"><code class="json">
+                </code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr />
+
+      <div class="alert alert-dark" role="alert">
+        <h5>Archivos asesorías</h5>
+      </div>
+      <div class="accordion" id="accordionPanelsStayOpenArchive">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button accordion-button-POST"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseArchive1"
+              aria-expanded="true"
+              aria-controls="panelsStayOpen-collapseArchive1"
+            >
+              Agregar archivo
+            </button>
+          </h2>
+          <div
+            id="panelsStayOpen-collapseArchive1"
+            class="accordion-collapse collapse"
+          >
+            <div class="accordion-body">
+              <div class="row g-3">
+                <div class="col-auto">
+                  <button class="btn btn-warning mb-3">POST</button>
+                </div>
+                <div class="col-10">
+                  <input
+                    type="url"
+                    class="form-control"
+                    value="{{base_url}}/api/advisory/{idAdvisory}/archive"
+                    readonly
+                  />
+                </div>
+              </div>
+              <div class="row g-1">
+                <h6>Request</h6>
+                <p>Accept: application/json</p>
+                <h6>Body - form-data</h6>
+                <pre class="bg-body-secondary"><code class="json">
+                  type: file | archives[] : ['patharchive1', 'patharchive2']               
+                </code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button accordion-button-GET collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseArchive2"
+              aria-expanded="false"
+              aria-controls="panelsStayOpen-collapseArchive2"
+            >
+              Obtener todos los archivos por asesoría
+            </button>
+          </h2>
+          <div
+            id="panelsStayOpen-collapseArchive2"
+            class="accordion-collapse collapse"
+          >
+            <div class="accordion-body">
+              <div class="row g-3">
+                <div class="col-auto">
+                  <button class="btn btn-success mb-3">GET</button>
+                </div>
+                <div class="col-10">
+                  <input
+                    type="url"
+                    class="form-control"
+                    value="{{base_url}}/api/advisory/{idAdvisory}/archive"
+                    readonly
+                  />
+                </div>
+              </div>
+              <div class="row g-1">
+                <h6>Request</h6>
+                <p>Accept: application/json</p>
+                <h6>Response</h6>
+                <pre class="bg-body-secondary"><code class="json">
+                  {
+                    "data": [
+                        {
+                            "id": 1,
+                            "archive": "https://pub-5f6388a436924c6bb9869b960ccdcfab.r2.dev/qyHeNk7lsn3H2Me7WTiEmi2eICdPdwXcgVvee1ja.pdf",
+                            "created_at": "25-08-2024 20:15:54"
+                        }
+                    ]
+                  }                                
+                </code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button accordion-button-DELETE collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseArchive3"
+              aria-expanded="false"
+              aria-controls="panelsStayOpen-collapseArchive3"
+            >
+              Eliminar un archivo
+            </button>
+          </h2>
+          <div
+            id="panelsStayOpen-collapseArchive3"
+            class="accordion-collapse collapse"
+          >
+            <div class="accordion-body">
+              <div class="row g-3">
+                <div class="col-auto">
+                  <button class="btn btn-danger mb-3">DELETE</button>
+                </div>
+                <div class="col-10">
+                  <input
+                    type="url"
+                    class="form-control"
+                    value="{{base_url}}/api/advisory/{idAdvisory}/archive/{idArchive}"
+                    readonly
+                  />
+                </div>
+              </div>
+              <div class="row g-1">
+                <h6>Request</h6>
+                <p>Accept: application/json</p>
+                <h6>Response</h6>
+                <pre class="bg-body-secondary"><code class="json">
+                </code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

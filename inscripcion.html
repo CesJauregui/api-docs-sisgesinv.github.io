@@ -57,17 +57,16 @@
                 <h6>Body</h6>
                 <pre class="bg-body-secondary"><code class="json">
                   {
-                    file:122221,
-                    professional_school: “IET”,
-                    thesis_project_title: “Ingeniería de SISTEMAS222”,
-                    office_number: “123-11321”,
-                    resolution_number: “112-11321”,
-                    reception_date_faculty: “01-08-2024”,
-                    approval_date_udi: “01-08-2023”,
-                    user_id: 1,
-                    user_ids[]: 9,
-                    user_ids[]: 10,
-                    description: “prueba de descripción”
+                    "file":122221,
+                    "professional_school": “IET”,
+                    "thesis_project_title": “Ingeniería de SISTEMAS”,
+                    "office_number": “123-11321”,
+                    "resolution_number": “112-11321”,
+                    "reception_date_faculty": “01-08-2024”,
+                    "approval_date_udi": “01-08-2023”,
+                    "user_id": "9d144981-c006-40b7-a158-8fb18d88df8b", //Revisor
+                    "user_ids": ["9d144981-d347-4f32-9950-6045f4d342e8", "9d144981-b303-411e-865f-003010967123"], //Egresados
+                    "description": “descripción”
                  }
                 </code></pre>
               </div>
@@ -111,55 +110,59 @@
                 <h6>Response</h6>
                 <pre class="bg-body-secondary"><code class="json">
                   {
-                    "data": {
-                        "id": 1,
-                        "file": 122221,
-                        "professional_school": "IET21",
-                        "thesis_project_title": "Ingeniería de SISTEMAS 202421",
-                        "office_number": "123-11321",
-                        "resolution_number": "112-11321",
-                        "general_status": "Revisión de Tesis",
-                        "inscriptions": [
-                            {
-                                "id": 1,
-                                "degree_processes_id": 1,
-                                "reception_date_faculty": "01-08-2024",
-                                "approval_date_udi": "01-08-2023",
-                                "status": "Aprobado",
-                                "teachers": [
-                                    {
-                                        "id": 8,
-                                        "name": "Dn. Andrés Villaseñor Espinal",
-                                        "surnames": "Villalpando",
-                                        "code": 23776712,
-                                        "email": "madrid.emmanuel@example.com",
-                                        "phone": 298206240,
-                                        "orcid": "consequatur",
-                                        "cip": 48238186
-                                    }
-                                ]
-                            }
-                        ],
-                        "graduates": [
-                            {
-                                "id": 9,
-                                "name": "Daniela Agustina Leal Nieves Hijo",
-                                "surnames": "Carbajal",
-                                "email": "wrobles@example.com",
-                                "phone": 951812965,
-                                "code": 37726580
-                            },
-                            {
-                                "id": 10,
-                                "name": "Ana Sofía Luciana Rosales García",
-                                "surnames": "Muro",
-                                "email": "lucia.rincon@example.org",
-                                "phone": 723289061,
-                                "code": 17155132
-                            }
-                        ]
-                    }, ...
-                }          
+                    "data": [
+                        {
+                          "id": "9d144a45-6c3a-4ff1-9bf0-46dee0cd3e8b",
+                          "file": 555555,
+                          "professional_school": "IET",
+                          "thesis_project_title": "Ingeniería de SISTEMAS e Ingenieria 2",
+                          "office_number": "123-11321",
+                          "resolution_number": "112-11321",
+                          "general_status": "Sustentación",
+                          "inscriptions": [
+                              {
+                                  "id": "9d144a45-8306-464c-9555-9287f20d4b2f",
+                                  "degree_processes_id": "9d144a45-6c3a-4ff1-9bf0-46dee0cd3e8b",
+                                  "reception_date_faculty": "01-08-2024",
+                                  "approval_date_udi": "01-08-2023",
+                                  "shipment_date_secretary": "19-09-2024",
+                                  "reviewer_was_paid": null,
+                                  "status": "Aprobado",
+                                  "teachers": [
+                                      {
+                                          "id": "9d144981-c006-40b7-a158-8fb18d88df8b",
+                                          "name": "Emily",
+                                          "surnames": "Castañeda",
+                                          "code": 81087079,
+                                          "email": "facundo52@example.org",
+                                          "phone": 441012531,
+                                          "orcid": "qui",
+                                          "cip": 34709112
+                                      }
+                                  ]
+                              }
+                          ],
+                          "graduates": [
+                              {
+                                  "id": "9d144981-d347-4f32-9950-6045f4d342e8",
+                                  "name": "Facundo",
+                                  "surnames": "Uribe",
+                                  "email": "xhernandez@example.com",
+                                  "phone": 189439579,
+                                  "code": 38711549
+                              },
+                              {
+                                  "id": "9d144981-b303-411e-865f-003010967123",
+                                  "name": "Daniel",
+                                  "surnames": "Muro",
+                                  "email": "jalicea@example.org",
+                                  "phone": 601787751,
+                                  "code": 26860615
+                              }
+                          ]
+                        },...
+                    ]
+                  }          
                 </code></pre>
               </div>
             </div>
@@ -203,54 +206,56 @@
                 <pre class="bg-body-secondary"><code class="json">
                   {
                     "data": {
-                        "id": 1,
-                        "file": 122221,
-                        "professional_school": "IET21",
-                        "thesis_project_title": "Ingeniería de SISTEMAS 202421",
+                        "id": "9d144a45-6c3a-4ff1-9bf0-46dee0cd3e8b",
+                        "file": 555555,
+                        "professional_school": "IET",
+                        "thesis_project_title": "Ingeniería de SISTEMAS e Ingenieria 2",
                         "office_number": "123-11321",
                         "resolution_number": "112-11321",
-                        "general_status": "Revisión de Tesis",
+                        "general_status": "Sustentación",
                         "inscriptions": [
                             {
-                                "id": 1,
-                                "degree_processes_id": 1,
+                                "id": "9d144a45-8306-464c-9555-9287f20d4b2f",
+                                "degree_processes_id": "9d144a45-6c3a-4ff1-9bf0-46dee0cd3e8b",
                                 "reception_date_faculty": "01-08-2024",
                                 "approval_date_udi": "01-08-2023",
+                                "shipment_date_secretary": "19-09-2024",
+                                "reviewer_was_paid": null,
                                 "status": "Aprobado",
                                 "teachers": [
                                     {
-                                        "id": 8,
-                                        "name": "Dn. Andrés Villaseñor Espinal",
-                                        "surnames": "Villalpando",
-                                        "code": 23776712,
-                                        "email": "madrid.emmanuel@example.com",
-                                        "phone": 298206240,
-                                        "orcid": "consequatur",
-                                        "cip": 48238186
+                                        "id": "9d144981-c006-40b7-a158-8fb18d88df8b",
+                                        "name": "Emily",
+                                        "surnames": "Castañeda",
+                                        "code": 81087079,
+                                        "email": "facundo52@example.org",
+                                        "phone": 441012531,
+                                        "orcid": "qui",
+                                        "cip": 34709112
                                     }
                                 ]
                             }
                         ],
                         "graduates": [
                             {
-                                "id": 9,
-                                "name": "Daniela Agustina Leal Nieves Hijo",
-                                "surnames": "Carbajal",
-                                "email": "wrobles@example.com",
-                                "phone": 951812965,
-                                "code": 37726580
+                                "id": "9d144981-d347-4f32-9950-6045f4d342e8",
+                                "name": "Facundo",
+                                "surnames": "Uribe",
+                                "email": "xhernandez@example.com",
+                                "phone": 189439579,
+                                "code": 38711549
                             },
                             {
-                                "id": 10,
-                                "name": "Ana Sofía Luciana Rosales García",
+                                "id": "9d144981-b303-411e-865f-003010967123",
+                                "name": "Daniel",
                                 "surnames": "Muro",
-                                "email": "lucia.rincon@example.org",
-                                "phone": 723289061,
-                                "code": 17155132
+                                "email": "jalicea@example.org",
+                                "phone": 601787751,
+                                "code": 26860615
                             }
                         ]
                     }
-                }          
+                  }       
                 </code></pre>
               </div>
             </div>
@@ -293,9 +298,16 @@
                 <h6>Body</h6>
                 <pre class="bg-body-secondary"><code class="json">
                   {
-                    "thesis_project_title": "Sistemas 3222222",
-                    "reception_date_faculty": "21-06-2024",
-                    "user_ids" : [3] // [1,2]
+                    "file": "555555",
+                    "professional_school": "ISI",
+                    "thesis_project_title": "Sistemas 31112",
+                    "office_number": "123-11321",
+                    "resolution_number": "112-11321",
+                    "reception_date_faculty": "21-01-2022",
+                    "approval_date_udi": "21-01-2022",
+                    "user_id" : "9d145c8e-34bf-4d20-b8be-25311609dcfc",
+                    "user_ids" : ["9d144981-d347-4f32-9950-6045f4d342e8","9d144981-c006-40b7-a158-8fb18d88df8b"],
+                    "reviewer_was_paid": true //default: false
                   }
                 </code></pre>
               </div>
@@ -378,13 +390,30 @@
                 <h6>Request</h6>
                 <p>Accept: application/json</p>
                 <h6>Request</h6>
-                <pre class="bg-body-secondary"><code class="json">
+                <pre class="bg-body-secondary">Según estado:<code class="json">
                   {
-                    // "status" : "Renuncia",
-                    // "description" : "Renuncia 1",
-                    // "shipment_date_secretary" : "05-05-2024",
-                    "status" : "Aprobado"
-                  }                    
+                    "status" : "Aprobado",
+                    "shipment_date_secretary" : "01-01-2024"
+                  }
+                  /*
+                  {
+                    "status" : "Renuncia",
+                    "description" : "Renuncia 1",
+                    "shipment_date_secretary" : "01-01-2024"  
+                  }
+                  */    
+                  /*
+                  {
+                    "status" : "Anulación",
+                    "description" : "Anulación 1",
+                    "shipment_date_secretary" : "01-01-2024"  
+                  }
+                  */  
+                  /*
+                  {
+                    "status" : "En revisión", // o "Observado"
+                  }
+                  */                
                 </code></pre>
               </div>
             </div>
@@ -485,7 +514,7 @@
                             "status": 0,
                             "created_at": "01-09-2024 20:40:02",
                             "user": {
-                                "id": 1,
+                                "id": "9d144981-b303-411e-865f-003010967123",
                                 "name": "Cesar",
                                 "surnames": "Jauregui"
                             }
@@ -722,7 +751,7 @@
                             "shipment_date_secretary": "00-00-0000",
                             "created_at": "31-08-2024 17:01:46",
                             "user": {
-                                "id": 1,
+                                "id": "9d144981-b303-411e-865f-003010967123",
                                 "name": "Cesar",
                                 "surnames": "Jauregui"
                             }
@@ -908,10 +937,12 @@
                   {
                     "data": [
                         {
-                            "id": 1,
-                            "archive": "https://pub-5f6388a436924c6bb9869b960ccdcfab.r2.dev/qyHeNk7lsn3H2Me7WTiEmi2eICdPdwXcgVvee1ja.pdf",
-                            "created_at": "25-08-2024 20:15:54"
-                        }
+                          "id": "9d1b309f-85ec-4b45-8188-e29ef0875580",
+                          "name": "cap03.pdf",
+                          "archive": "https://pub-5f6388a436924c6bb9869b960ccdcfab.r2.dev/uploads/cap03.pdf",
+                          "created_at": "26-09-2024 20:37:34",
+                          "user_id": "9d14491a-044b-4624-8954-3240d438603f"
+                        },...
                     ]
                   }                                
                 </code></pre>

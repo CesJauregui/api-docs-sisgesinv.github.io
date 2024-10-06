@@ -56,72 +56,74 @@
                 <p>Accept: application/json</p>
                 <h6>Body</h6>
                 <pre class="bg-body-secondary">Segun rol:<code class="json">
-                  /*
-                    {
-                      "role": "Docente",
-                      "name": "Cesar",
-                      "surnames": "Jauregui Saavedra",
-                      "email": "cesarjauregui@test.com",
-                      "phone": 986457511,
-                      "code": 11525320,
-                      "career": "Ingenieria de sistemas",
-                      "line": "Programación",
-                      "sublines": "Base de datos",
-                      "is_reviewer": true,
-                      "is_advisor": true,
-                      "is_jury": false
-                    }
-                  */
+/*
+  {
+    "role": "Docente",
+    "name": "Cesar",
+    "surnames": "Jauregui Saavedra",
+    "email": "cesarjauregui@test.com",
+    "phone": 986457511,
+    "code": 11525320,
+    "career": "Ingenieria de sistemas",
+    "line": "Programación",
+    "sublines": "Base de datos",
+    "orcid": "0000-0001-2345-6789",
+    "cip": 287155,
+    "is_reviewer": true,
+    "is_advisor": true,
+    "is_jury": false
+  }
+*/
 
-                  /*
-                    {
-                      "role": "Egresado",
-                      "name": "Ana",
-                      "surnames": "Benavidez Ayala",
-                      "email": "ana@test.com",
-                      "phone": 987145312,
-                      "code": 15467824,
-                      "discharge_date": "2023-07-22",
-                      "career": "Ingenieria Electrónica"
-                    }                
-                  */
+/*
+  {
+    "role": "Egresado",
+    "name": "Ana",
+    "surnames": "Benavidez Ayala",
+    "email": "ana@test.com",
+    "phone": 987145312,
+    "code": 15467824,
+    "discharge_date": "2023-07-22",
+    "career": "Ingenieria Electrónica"
+  }                
+*/
 
-                  /*
-                    {
-                      "role": "Semillero",
-                      "name": "Valentina",
-                      "surnames": "Duarte Zavala",
-                      "email": "valentina@test.com",
-                      "phone": 986556688,
-                      "code": 16848778,
-                      "cycle": "X"
-                    }
-                  */
+/*
+  {
+    "role": "Semillero",
+    "name": "Valentina",
+    "surnames": "Duarte Zavala",
+    "email": "valentina@test.com",
+    "phone": 986556688,
+    "code": 16848778,
+    "cycle": "X"
+  }
+*/
 
-                  /*
-                    {
-                      "role": "Estudiante",
-                      "name": "María",
-                      "surnames": "Villanueva Alarcón",
-                      "email": "maria@test.com",
-                      "phone": 984112548,
-                      "code": 11548547,
-                      "cycle": "X",
-                      "career": "Ingenieria Electrónica"
-                    }
-                  */
-                  
-                  /*
-                  {
-                    "role": "UDI",
-                    "name": "Juan",
-                    "surnames": "Gomez Ramirez",
-                    "email": "juan@test.com",
-                    "phone": 984575157,
-                    "code": 12161658,
-                    "career": "Ingenieria de sistemas"
-                  }
-                  */
+/*
+  {
+    "role": "Estudiante",
+    "name": "María",
+    "surnames": "Villanueva Alarcón",
+    "email": "maria@test.com",
+    "phone": 984112548,
+    "code": 11548547,
+    "cycle": "X",
+    "career": "Ingenieria Electrónica"
+  }
+*/
+
+/*
+{
+  "role": "UDI",
+  "name": "Juan",
+  "surnames": "Gomez Ramirez",
+  "email": "juan@test.com",
+  "phone": 984575157,
+  "code": 12161658,
+  "career": "Ingenieria de sistemas"
+}
+*/
                 </code></pre>
               </div>
             </div>
@@ -163,33 +165,29 @@
                 <p>Accept: application/json</p>
                 <h6>Response</h6>
                 <pre class="bg-body-secondary"><code class="json">
-                  {
-                    "data": [
-                        {
-                            "id": 1,
-                            "role": "UDI",
-                            "name": "Cesar",
-                            "surnames": "Jauregui",
-                            "email": "cesar.admin@test.com",
-                            "phone": 0,
-                            "code": 0,
-                            "discharge_date": null,
-                            "cycle": null,
-                            "career": null,
-                            "line": null,
-                            "sublines": null,
-                            "is_reviewer": 0,
-                            "is_advisor": 0,
-                            "is_jury": 0,
-                            "orcid": null,
-                            "cip": null,
-                            "status": "Habilitado",
-                            "email_verified_at": null,
-                            "created_at": "2024-08-25T22:30:16.000000Z",
-                            "updated_at": "2024-08-25T22:30:16.000000Z"
-                        },...
-                    ]
-                  }      
+{
+  "id": "9d14491a-044b-4624-8954-3240d438603f",
+  "role": "UDI",
+  "name": "Cesar",
+  "surnames": "JAUREGUI SAAVEDRA",
+  "email": "eliass.montes@example.com",
+  "phone": 984575157,
+  "code": 12161658,
+  "discharge_date": null,
+  "cycle": "X",
+  "career": null,
+  "line": null,
+  "sublines": null,
+  "is_reviewer": 0,
+  "is_advisor": 0,
+  "is_jury": 0,
+  "orcid": null,
+  "cip": null,
+  "status": "Habilitado",
+  "email_verified_at": null,
+  "created_at": "2024-09-23T15:15:13.000000Z",
+  "updated_at": "2024-10-04T02:07:25.000000Z"
+}
                 </code></pre>
               </div>
             </div>
@@ -231,32 +229,29 @@
                 <p>Accept: application/json</p>
                 <h6>Response</h6>
                 <pre class="bg-body-secondary"><code class="json">
-                  {
-                    "status": true,
-                    "user": {
-                        "id": 2,
-                        "role": "Estudiante",
-                        "name": "Sr. Carlos Estrada Trujillo",
-                        "surnames": "Anaya",
-                        "email": "ncanales@example.com",
-                        "phone": 932041508,
-                        "code": 51886026,
-                        "discharge_date": "2003-04-30",
-                        "cycle": "IX",
-                        "career": "Ing. Sistemas",
-                        "line": "Ing. Electronica",
-                        "sublines": "qui",
-                        "is_reviewer": 0,
-                        "is_advisor": 0,
-                        "is_jury": 0,
-                        "orcid": "nisi",
-                        "cip": 11804816,
-                        "status": "Habilitado",
-                        "email_verified_at": "2024-08-25T22:33:16.000000Z",
-                        "created_at": "2024-08-25T22:33:19.000000Z",
-                        "updated_at": "2024-08-25T22:33:19.000000Z"
-                    }
-                  }    
+{
+  "id": "9d14491a-044b-4624-8954-3240d438603f",
+  "role": "UDI",
+  "name": "Cesar",
+  "surnames": "JAUREGUI SAAVEDRA",
+  "email": "eliass.montes@example.com",
+  "phone": 984575157,
+  "code": 12161658,
+  "discharge_date": null,
+  "cycle": "X",
+  "career": null,
+  "line": null,
+  "sublines": null,
+  "is_reviewer": 0,
+  "is_advisor": 0,
+  "is_jury": 0,
+  "orcid": null,
+  "cip": null,
+  "status": "Habilitado",
+  "email_verified_at": null,
+  "created_at": "2024-09-23T15:15:13.000000Z",
+  "updated_at": "2024-10-04T02:07:25.000000Z"
+}    
                 </code></pre>
               </div>
             </div>
@@ -297,10 +292,16 @@
                 <h6>Request</h6>
                 <p>Accept: application/json</p>
                 <h6>Body</h6>
-                <pre class="bg-body-secondary"><code class="json">
-                  {
-                    "name": "Juan"
-                  }
+                <pre class="bg-body-secondary">Segun rol<code class="json">
+{
+  "role": "Semillero",
+  "name": "Cesar",
+  "surnames": "lastname",
+  "email": "eliass.montes@example.com",
+  "phone": 984575157,
+  "code": 12161658,
+  "cycle": "X"
+}
                 </code></pre>
               </div>
             </div>
@@ -383,28 +384,28 @@
                 <p>Accept: application/json</p>
                 <h6>Response</h6>
                 <pre class="bg-body-secondary"><code class="json">
-                  {
-                    "data": [
-                        {
-                            "id": 6,
-                            "name": "Rodrigo Cepeda",
-                            "surnames": "Anguiano Lovato",
-                            "email": "mgranados@example.com",
-                            "phone": 399570148,
-                            "code": 28681077,
-                            "cycle": "X"
-                        },
-                        {
-                            "id": 12,
-                            "name": "Ana",
-                            "surnames": "Benavidez Ayala",
-                            "email": "ana@test.com",
-                            "phone": 987145312,
-                            "code": 15467824,
-                            "cycle": "IX"
-                        },...
-                    ]
-                }     
+{
+  "data": [
+      {
+          "id": "9d144981-5736-4517-bb10-1fd69a7c3883",
+          "name": "Rodrigo Cepeda",
+          "surnames": "Anguiano Lovato",
+          "email": "mgranados@example.com",
+          "phone": 399570148,
+          "code": 28681077,
+          "cycle": "X"
+      },
+      {
+          "id": "9d144981-6db0-4c6a-b963-a36350e08e94",
+          "name": "Ana",
+          "surnames": "Benavidez Ayala",
+          "email": "ana@test.com",
+          "phone": 987145312,
+          "code": 15467824,
+          "cycle": "IX"
+      },...
+  ]
+}     
                 </code></pre>
               </div>
             </div>
@@ -446,30 +447,30 @@
                 <p>Accept: application/json</p>
                 <h6>Response</h6>
                 <pre class="bg-body-secondary"><code class="json">
-                  {
-                    "data": [
-                        {
-                            "id": 3,
-                            "name": "Nadia Daniela",
-                            "surnames": "Vallejo Rodríguez",
-                            "code": 45778452,
-                            "email": "joshua65@example.net",
-                            "phone": 297546617,
-                            "orcid": "esse",
-                            "cip": 38344486
-                        },
-                        {
-                            "id": 7,
-                            "name": "Ashley Esquibel",
-                            "surnames": "Hijo Brito",
-                            "code": 56427284,
-                            "email": "kochoa@example.org",
-                            "phone": 177932979,
-                            "orcid": "possimus",
-                            "cip": 47213143
-                        },...
-                    ]
-                }  
+{
+  "data": [
+      {
+          "id": "9d144981-7aef-443a-8a11-ae2164fdbec9",
+          "name": "Nadia Daniela",
+          "surnames": "Vallejo Rodríguez",
+          "code": 45778452,
+          "email": "joshua65@example.net",
+          "phone": 297546617,
+          "orcid": "esse",
+          "cip": 38344486
+      },
+      {
+          "id": "9d144981-88d9-4c1e-8a90-757c4c82041d",
+          "name": "Ashley Esquibel",
+          "surnames": "Hijo Brito",
+          "code": 56427284,
+          "email": "kochoa@example.org",
+          "phone": 177932979,
+          "orcid": "possimus",
+          "cip": 47213143
+      },...
+  ]
+}  
                 </code></pre>
               </div>
             </div>
@@ -511,26 +512,26 @@
                 <p>Accept: application/json</p>
                 <h6>Response</h6>
                 <pre class="bg-body-secondary"><code class="json">
-                  {
-                    "data": [
-                        {
-                            "id": 13,
-                            "name": "Ana",
-                            "surnames": "Benavidez Ayala",
-                            "email": "anas@test.com",
-                            "phone": 987145312,
-                            "code": 15467824
-                        },
-                        {
-                            "id": 14,
-                            "name": "Juan",
-                            "surnames": "Gomez Ramirez",
-                            "email": "juan@test.com",
-                            "phone": 984575157,
-                            "code": 12161658
-                        },...
-                    ]
-                } 
+{
+  "data": [
+      {
+          "id": "9d144981-96d9-484f-a7fd-b81059a654b3",
+          "name": "Ana",
+          "surnames": "Benavidez Ayala",
+          "email": "anas@test.com",
+          "phone": 987145312,
+          "code": 15467824
+      },
+      {
+          "id": "9d144981-a4e7-4fd3-80fa-3feec3f4ec92",
+          "name": "Juan",
+          "surnames": "Gomez Ramirez",
+          "email": "juan@test.com",
+          "phone": 984575157,
+          "code": 12161658
+      },...
+  ]
+} 
                 </code></pre>
               </div>
             </div>

@@ -91,7 +91,7 @@
                   <input
                     type="url"
                     class="form-control"
-                    value="{{base_url}}/api/auth/recuperar-contrasenia"
+                    value="{{base_url}}/api/forgot-password"
                     readonly
                   />
                 </div>
@@ -105,6 +105,58 @@
                           "email" : "juan@test.com"
                       }
                   </code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button accordion-button-POST"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapsefour"
+              aria-expanded="true"
+              aria-controls="panelsStayOpen-collapsefour"
+            >
+              Formulario Recuperar Contraseña
+            </button>
+          </h2>
+          <div
+            id="panelsStayOpen-collapsefour"
+            class="accordion-collapse collapse"
+          >
+            <div class="accordion-body">
+              <div class="row g-3">
+                <div class="col-auto">
+                  <button class="btn btn-warning mb-3">POST</button>
+                </div>
+                <div class="col-10">
+                  <input
+                    type="url"
+                    class="form-control"
+                    value="{{base_url}}/api/reset-password?token={token}&email={email}"
+                    readonly
+                  />
+                </div>
+              </div>
+              <div class="row g-1">
+                <h6>Request</h6>
+                <p>Accept: application/json</p>
+                <h6>Body</h6>
+                <pre class="bg-body-secondary"><code class="json">
+                    Nota: Despues de ingresar el correo en "Recuperar Contraseña", el sistema enviará un correo a ese email
+                    la siguiente URL.
+                    
+                    Endpoint de ejemplo: 
+                     - {{base_url}}/api/reset-password?token=38588b20b0bd9abd99bf0199726b5b90bcc4155b496db7e8c3aa73db76edbd51&email=gary%40test.com
+                    
+                    {
+                        "email" : "juan@test.com",
+                        "password" : "nuevacontraseña",
+                        "password_confirmation": "nuevacontraseña"
+                    }
+                </code></pre>
               </div>
             </div>
           </div>

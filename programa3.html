@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Api Docs - Sisgesinv</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div class="navbar"></div>
+    <section class="main">
+      <div class="alert alert-dark" role="alert">
+        <h5>Programa 3</h5>
+      </div>
+      <div class="accordion" id="accordionPanelsStayOpenExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button accordion-button-POST"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseOne"
+              aria-expanded="true"
+              aria-controls="panelsStayOpen-collapseOne"
+            >
+              Nuevo Plan
+            </button>
+          </h2>
+          <div
+            id="panelsStayOpen-collapseOne"
+            class="accordion-collapse collapse show"
+          >
+            <div class="accordion-body">
+              <div class="row g-3">
+                <div class="col-auto">
+                  <button class="btn btn-warning mb-3">POST</button>
+                </div>
+                <div class="col-10">
+                  <input
+                    type="url"
+                    class="form-control"
+                    value="{{base_url}}/api/plan"
+                    readonly
+                  />
+                </div>
+              </div>
+              <div class="row g-1">
+                <h6>Request</h6>
+                <p>Accept: application/json</p>
+                <h6>Body</h6>
+                <pre class="bg-body-secondary"><code class="json">
+[
+    {
+        "title": "Programa 2026",
+        "activities": [
+            {
+                "code_activity" : "1",
+                "description_activity": "Actividad 1",
+                "tasks": [
+                    {
+                        "code_task": "1.1",
+                        "description_task": "Tarea 1",
+                        "months": "true,false,false,false,false,false,false,true,false,false,false,false",
+                        "comment": ""
+                    },
+                    {
+                        "code_task" : "1.2",
+                        "description_task": "Tarea 2",
+                        "months": "true,false,false,false,false,false,false,true,false,false,false,false",
+                        "comment": "Comentario de prueba"
+                    },
+                    {
+                        ...
+                    }
+                ]
+            },
+            {
+                "code_activity" : "2",
+                "description_activity": "Actividad 2",
+                "tasks": [
+                    {
+                        "code_task": "2.1",
+                        "description_task": "Tarea 2222",
+                        "months": "true,false,false,false,false,false,false,true,false,false,false,false",
+                        "comment": ""
+                    }
+                ]
+            },
+            {
+                ...
+            }
+        ]
+    }
+]
+                </code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button accordion-button-GET collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseTwo"
+              aria-expanded="false"
+              aria-controls="panelsStayOpen-collapseTwo"
+            >
+              Obtener todos planes
+            </button>
+          </h2>
+          <div
+            id="panelsStayOpen-collapseTwo"
+            class="accordion-collapse collapse"
+          >
+            <div class="accordion-body">
+              <div class="row g-3">
+                <div class="col-auto">
+                  <button class="btn btn-success mb-3">GET</button>
+                </div>
+                <div class="col-10">
+                  <input
+                    type="url"
+                    class="form-control"
+                    value="{{base_url}}/api/plan"
+                    readonly
+                  />
+                </div>
+              </div>
+              <div class="row g-1">
+                <h6>Request</h6>
+                <p>Accept: application/json</p>
+                <h6>Response</h6>
+                <pre class="bg-body-secondary"><code class="json">
+{
+    "data": [
+        {
+            "id": "9d2cc54a-2b82-4121-b2c2-d3d75d7a1c95",
+            "title": "Programa 2025",
+            "created_at": "05-10-2024 14:22:20",
+            "activities": [
+                {
+                    "id": "9d2cc54a-2fa1-402f-b480-0fb4b857d1e0",
+                    "code_activity": "1",
+                    "description_activity": "Descripción de actividad 1",
+                    "tasks": [
+                        {
+                            "id": "9d2cc54a-3033-4cad-970b-3f3adf203c32",
+                            "code_task": "1.1",
+                            "description_task": "Descripción de la Tarea 1.1",
+                            "months": "true,false,false,false,false,true,false,true,false,false,false,false",
+                            "comment": "prueba"
+                        },
+                        {
+                            "id": "9d2cc659-00a1-46e7-889f-8b647931ba14",
+                            "code_task": "1.2",
+                            "description_task": "Descripción de la Tarea 1.2",
+                            "months": "true,false,false,false,false,false,false,true,false,false,false,false",
+                            "comment": "Comentario de prueba"
+                        },
+                        {
+                            ...
+                        }
+                    ]
+                },
+                {
+                    "id": "9d2cc54a-30d8-4206-9814-9bc4bbbe39cd",
+                    "code_activity": "2",
+                    "description_activity": "Descripción de actividad 2,
+                    "tasks": [
+                        {
+                            "id": "9d2cc54a-3121-47fe-8ddc-76b4c3be50a5",
+                            "code_task": "2.1",
+                            "description_task": "Descripción de la Tarea 2.1",
+                            "months": "true,false,false,false,false,false,false,true,false,false,false,false",
+                            "comment": null
+                        },
+                        {
+                            ...
+                        }
+                    ]
+                },
+                {
+                    ...
+                }
+            ]
+        },
+        {
+            ...
+        }
+    ]
+}       
+                </code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button accordion-button-PUT collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseFour"
+              aria-expanded="false"
+              aria-controls="panelsStayOpen-collapseFour"
+            >
+              Actualizar un plan
+            </button>
+          </h2>
+          <div
+            id="panelsStayOpen-collapseFour"
+            class="accordion-collapse collapse"
+          >
+            <div class="accordion-body">
+              <div class="row g-3">
+                <div class="col-auto">
+                  <button class="btn btn-primary mb-3">PUT</button>
+                </div>
+                <div class="col-10">
+                  <input
+                    type="url"
+                    class="form-control"
+                    value="{{base_url}}/api/plan/{idPlan}"
+                    readonly
+                  />
+                </div>
+              </div>
+              <div class="row g-1">
+                <h6>Request</h6>
+                <p>Accept: application/json</p>
+                <h6>Body</h6>
+                <pre class="bg-body-secondary"><code class="json">
+[
+    {
+        "title": "Programa 2025",
+        "activities": [
+            {
+                "id": "9d2cc54a-2fa1-402f-b480-0fb4b857d1e0",
+                "code_activity" : "1",
+                "description_activity": "Descripción de la actividad 1",
+                "tasks": [
+                    {
+                        "id": "9d2cc54a-3033-4cad-970b-3f3adf203c32",
+                        "code_task": "1.1",
+                        "description_task": "Descripción de la Tarea 1.1",
+                        "months": "true,false,false,false,false,true,false,true,false,false,false,false",
+                        "comment": "Actualización"
+                    },
+                    {
+                        "id": "9d2cc659-00a1-46e7-889f-8b647931ba14",
+                        "code_task": "1.2",
+                        "description_task": "Descripción de la Tarea 1.2",
+                        "months": "true,false,false,false,false,false,false,true,false,false,false,false",
+                        "comment": "Comentario de prueba"
+                    },
+                    {
+                        ...
+                    }
+                ]
+            },
+            {
+                "id": "9d2cc54a-30d8-4206-9814-9bc4bbbe39cd",
+                "code_activity" : "2",
+                "description_activity": "Descripción de la actividad 2",
+                "tasks": [
+                    {
+                        "id": "9d2cc54a-3121-47fe-8ddc-76b4c3be50a5",
+                        "code_task": "2.1",
+                        "description_task": "Descripción de la Tarea 2.2",
+                        "months": "true,false,false,false,false,false,false,true,false,false,false,false",
+                        "comment": ""
+                    },
+                    {
+                        ...
+                    }
+                ]
+            },
+            {
+                ...
+            }
+        ]
+    }
+]
+                </code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button accordion-button-DELETE collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseFive"
+              aria-expanded="false"
+              aria-controls="panelsStayOpen-collapseFive"
+            >
+              Eliminar un plan
+            </button>
+          </h2>
+          <div
+            id="panelsStayOpen-collapseFive"
+            class="accordion-collapse collapse"
+          >
+            <div class="accordion-body">
+              <div class="row g-3">
+                <div class="col-auto">
+                  <button class="btn btn-danger mb-3">DELETE</button>
+                </div>
+                <div class="col-10">
+                  <input
+                    type="url"
+                    class="form-control"
+                    value="{{base_url}}/api/plan/{idPlan}"
+                    readonly
+                  />
+                </div>
+              </div>
+              <div class="row g-1">
+                <h6>Request</h6>
+                <p>Accept: application/json</p>
+                <h6>Response</h6>
+                <pre class="bg-body-secondary"><code class="json">
+                </code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

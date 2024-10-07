@@ -274,6 +274,126 @@
             </div>
           </div>
         </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button accordion-button-GET collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseThree"
+              aria-expanded="false"
+              aria-controls="panelsStayOpen-collapseThree"
+            >
+              Actividad mensual de estados
+            </button>
+          </h2>
+          <div
+            id="panelsStayOpen-collapseThree"
+            class="accordion-collapse collapse"
+          >
+            <div class="accordion-body">
+              <div class="row g-3">
+                <div class="col-auto">
+                  <button class="btn btn-success mb-3">GET</button>
+                </div>
+                <div class="col-10">
+                  <h6>Inscripciones</h6>
+                  <div class="bg-body-secondary">
+                    Status:
+                    <ul>
+                      <li class="px-2">inscribed</li>
+                      <li class="px-2">review</li>
+                      <li class="px-2">observed</li>
+                      <li class="px-2">resigned</li>
+                      <li class="px-2">approved</li>
+                    </ul>
+                  </div>
+                  <input
+                    type="url"
+                    class="form-control"
+                    value="{{base_url}}/api/monthly-inscriptions/{status}"
+                    readonly
+                  />
+                  <hr />
+                  <h6>Asesorías</h6>
+                  <div class="bg-body-secondary">
+                    Status:
+                    <ul>
+                      <li class="px-2">advisory</li>
+                      <li class="px-2">review</li>
+                      <li class="px-2">observed</li>
+                      <li class="px-2">cancelled</li>
+                      <li class="px-2">approved</li>
+                    </ul>
+                  </div>
+                  <input
+                    type="url"
+                    class="form-control"
+                    value="{{base_url}}/api/monthly-advisories/{status}"
+                    readonly
+                  />
+                  <hr />
+                  <h6>Revisiones de tésis</h6>
+                  <div class="bg-body-secondary">
+                    Status:
+                    <ul>
+                      <li class="px-2">review</li>
+                      <li class="px-2">notapproved</li>
+                      <li class="px-2">approved</li>
+                    </ul>
+                  </div>
+                  <input
+                    type="url"
+                    class="form-control"
+                    value="{{base_url}}/api/monthly-reviews/{status}"
+                    readonly
+                  />
+                  <hr />
+                  <h6>Sustentaciones</h6>
+                  <div class="bg-body-secondary">
+                    Status:
+                    <ul>
+                      <li class="px-2">inprocess</li>
+                      <li class="px-2">notapproved</li>
+                      <li class="px-2">approved</li>
+                    </ul>
+                  </div>
+                  <input
+                    type="url"
+                    class="form-control"
+                    value="{{base_url}}/api/monthly-presentations/{status}"
+                    readonly
+                  />
+                  <hr />
+                </div>
+              </div>
+              <div class="row g-1">
+                <h6>Request</h6>
+                <p>Accept: application/json</p>
+                <h6>Response</h6>
+                Contador mensual de estados de inscripciones, asesorías,
+                revisiones y sustentaciones.
+                <pre class="bg-body-secondary"><code class="json">
+                  {
+                    "data": [
+                        {
+                            "total_changes": 1,
+                            "month": "2024-09" // año-mes
+                        },
+                        {
+                            "total_changes": 2,
+                            "month": "2024-10" // año-mes
+                        },
+                        {
+                          ...
+                        }
+                    ]
+                  }
+                </code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 

@@ -17,7 +17,7 @@
     <div class="navbar"></div>
     <section class="main">
       <div class="alert alert-dark" role="alert">
-        <h5>Programa 3</h5>
+        <h5>Programa 3 - Planes</h5>
       </div>
       <div class="accordion" id="accordionPanelsStayOpenExample">
         <div class="accordion-item">
@@ -239,7 +239,9 @@
                 <h6>Request</h6>
                 <p>Accept: application/json</p>
                 <h6>Body</h6>
-                <pre class="bg-body-secondary"><code class="json">
+                <pre
+                  class="bg-body-secondary"
+                >//Si en caso se agrega un nuevo registro (actividad o tarea), no mandar id ya que es un registro nuevo<code class="json">
 [
     {
         "title": "Programa 2025",
@@ -265,7 +267,13 @@
                     },
                     {
                         ...
-                    }
+                    },
+                    { //Nueva tarea
+                        "code_task": "1.3" 
+                        "description_task": "Descripción de la Tarea 1.3",
+                        "months": "true,false,false,false,false,false,false,true,false,false,false,false",
+                        "comment": "Comentario de prueba de tarea nueva"
+                    },
                 ]
             },
             {
@@ -333,6 +341,435 @@
                 <h6>Response</h6>
                 <pre class="bg-body-secondary"><code class="json">
                 </code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <div class="alert alert-dark" role="alert">
+        <h5>Programa 3 - Presupuesto</h5>
+      </div>
+      <div class="accordion" id="accordionPanelsStayOpenExample2">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button accordion-button-POST"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseOne1"
+              aria-expanded="true"
+              aria-controls="panelsStayOpen-collapseOne1"
+            >
+              Nuevo Presupuesto
+            </button>
+          </h2>
+          <div
+            id="panelsStayOpen-collapseOne1"
+            class="accordion-collapse collapse"
+          >
+            <div class="accordion-body">
+              <div class="row g-3">
+                <div class="col-auto">
+                  <button class="btn btn-warning mb-3">POST</button>
+                </div>
+                <div class="col-10">
+                  <input
+                    type="url"
+                    class="form-control"
+                    value="{{base_url}}/api/budget"
+                    readonly
+                  />
+                </div>
+              </div>
+              <div class="row g-1">
+                <h6>Request</h6>
+                <p>Accept: application/json</p>
+                <h6>Body</h6>
+                <pre class="bg-body-secondary"><code class="json">
+[
+  {
+      "plan_id": "9d2cc54a-2b82-4121-b2c2-d3d75d7a1c95",
+      "expenses": [
+          {
+              "specific_expense": "Descripción gasto específico 1",
+              "month_amount": "100,0,0,0,1800,0,0,0,0,1800,0,0",
+              "accounting_item": "Rubro contable 1",
+              "task_id": "9d2cc54a-3033-4cad-970b-3f3adf203c32",
+              "activity_id": "9d2cc54a-2fa1-402f-b480-0fb4b857d1e0"
+          },
+          {
+              "specific_expense": "Descripción gasto específico 2",
+              "month_amount": "222,222,0,0,0,0,0,1500,333,0,0,0",
+              "accounting_item": "Rubro contable 2",
+              "task_id": "9d2cc54a-3121-47fe-8ddc-76b4c3be50a5",
+              "activity_id": "9d2cc54a-30d8-4206-9814-9bc4bbbe39cd"
+          }
+      ]
+  }
+]
+                </code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button accordion-button-GET collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseTwo1"
+              aria-expanded="false"
+              aria-controls="panelsStayOpen-collapseTwo1"
+            >
+              Obtener todos los Presupuestos
+            </button>
+          </h2>
+          <div
+            id="panelsStayOpen-collapseTwo1"
+            class="accordion-collapse collapse"
+          >
+            <div class="accordion-body">
+              <div class="row g-3">
+                <div class="col-auto">
+                  <button class="btn btn-success mb-3">GET</button>
+                </div>
+                <div class="col-10">
+                  <input
+                    type="url"
+                    class="form-control"
+                    value="{{base_url}}/api/budget"
+                    readonly
+                  />
+                </div>
+              </div>
+              <div class="row g-1">
+                <h6>Request</h6>
+                <p>Accept: application/json</p>
+                <h6>Response</h6>
+                <pre class="bg-body-secondary"><code class="json">
+{
+  "data": [
+      {
+          "id": "9d3561b6-d3cc-49aa-9d9e-0f13b14a3b34",
+          "plan": "Programa 2025",
+          "expenses": [
+              {
+                  "id": "9d356a47-2575-40d2-88b7-7646240056dc",
+                  "code_activity": "1",
+                  "description_activity": "Descripción Actividad 1",
+                  "code_task": "1.1",
+                  "description_task": "Descripción Tarea 1.1",
+                  "accounting_item": "Rubro contable 1",
+                  "specific_expense": "Descripción gasto específico 2",
+                  "month_amount": "100,0,0,0,0,0,0,0,0,0,0,111"
+              },
+              {
+                  "id": "9d3561b6-f271-4b90-9619-c6f9394d6377",
+                  "code_activity": "2",
+                  "description_activity": "Descripción Actividad 2",
+                  "code_task": "2.1",
+                  "description_task": "Descripción Tarea 2.1",
+                  "accounting_item": "Rubro contable 2",
+                  "specific_expense": "Descripción gasto específico 2",
+                  "month_amount": "222,222,0,0,0,0,0,1500,333,0,0,2222"
+              },
+              {
+                ...
+              }
+          ]
+      }
+  ]
+}    
+                </code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button accordion-button-PUT collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseFour1"
+              aria-expanded="false"
+              aria-controls="panelsStayOpen-collapseFour1"
+            >
+              Actualizar un Presupuesto
+            </button>
+          </h2>
+          <div
+            id="panelsStayOpen-collapseFour1"
+            class="accordion-collapse collapse"
+          >
+            <div class="accordion-body">
+              <div class="row g-3">
+                <div class="col-auto">
+                  <button class="btn btn-primary mb-3">PUT</button>
+                </div>
+                <div class="col-10">
+                  <input
+                    type="url"
+                    class="form-control"
+                    value="{{base_url}}/api/budget/{idBudget}"
+                    readonly
+                  />
+                </div>
+              </div>
+              <div class="row g-1">
+                <h6>Request</h6>
+                <p>Accept: application/json</p>
+                <h6>Body</h6>
+                <pre
+                  class="bg-body-secondary"
+                >//Si en caso se agrega un nuevo gasto, no mandar "id" ya que es un registro nuevo<code class="json">
+[
+  {
+      "plan_id": "9d2cc54a-2b82-4121-b2c2-d3d75d7a1c95",
+      "expenses": [
+          {
+              "id": "9d3561b6-f271-4b90-9619-c6f9394d6377",
+              "activity_id": "9d2cc54a-30d8-4206-9814-9bc4bbbe39cd",
+              "task_id": "9d2cc54a-3121-47fe-8ddc-76b4c3be50a5",
+              "accounting_item": "Rubro contable 1",
+              "specific_expense": "Descripción gasto específico 1",
+              "month_amount": "222,222,0,0,0,0,0,1500,333,0,0,2222"
+          },
+          {
+              "id": "9d356a47-2575-40d2-88b7-7646240056dc",
+              "activity_id": "9d2cc54a-2fa1-402f-b480-0fb4b857d1e0",
+              "task_id": "9d2cc54a-3033-4cad-970b-3f3adf203c32",
+              "accounting_item": "Rubro contable 2",
+              "specific_expense": "Descripción gasto específico 2",
+              "month_amount": "100,0,0,0,0,0,0,0,0,0,0,111"
+          },
+          { //Nuevo Gasto
+              "activity_id": "9d2cc54a-2fa1-402f-b480-0fb4b857d1e0",
+              "task_id": "9d356b2b-e6e3-4038-a73f-4c903b95c89c",
+              "accounting_item": "Nuevo rubro contable",
+              "specific_expense": "Nuevo gasto específico",
+              "month_amount": "100,0,0,0,0,0,1111,0,0,0,0,11221"
+          }
+      ]
+  }
+]
+                </code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button accordion-button-DELETE collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseFive1"
+              aria-expanded="false"
+              aria-controls="panelsStayOpen-collapseFive1"
+            >
+              Eliminar un Presupuesto
+            </button>
+          </h2>
+          <div
+            id="panelsStayOpen-collapseFive1"
+            class="accordion-collapse collapse"
+          >
+            <div class="accordion-body">
+              <div class="row g-3">
+                <div class="col-auto">
+                  <button class="btn btn-danger mb-3">DELETE</button>
+                </div>
+                <div class="col-10">
+                  <input
+                    type="url"
+                    class="form-control"
+                    value="{{base_url}}/api/budget/{idBudget}"
+                    readonly
+                  />
+                </div>
+              </div>
+              <div class="row g-1">
+                <h6>Request</h6>
+                <p>Accept: application/json</p>
+                <h6>Response</h6>
+                <pre class="bg-body-secondary"><code class="json">
+                </code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <div class="alert alert-dark" role="alert">
+        <h5>
+          Programa 3 - Endpoints de obtener el plan, actividades y tareas para
+          registrar un presupuesto
+        </h5>
+      </div>
+      <div class="accordion" id="accordionPanelsStayOpenExample2">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button accordion-button-GET collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseOne2"
+              aria-expanded="false"
+              aria-controls="panelsStayOpen-collapseOne2"
+            >
+              Obtener todos los planes
+            </button>
+          </h2>
+          <div
+            id="panelsStayOpen-collapseOne2"
+            class="accordion-collapse collapse"
+          >
+            <div class="accordion-body">
+              <div class="row g-3">
+                <div class="col-auto">
+                  <button class="btn btn-success mb-3">GET</button>
+                </div>
+                <div class="col-10">
+                  <input
+                    type="url"
+                    class="form-control"
+                    value="{{base_url}}/api/plans"
+                    readonly
+                  />
+                </div>
+              </div>
+              <div class="row g-1">
+                <h6>Request</h6>
+                <p>Accept: application/json</p>
+                <h6>Response</h6>
+                <pre class="bg-body-secondary"><code class="json">
+                {
+                  "data": [
+                      {
+                          "id": "9d2cc54a-2b82-4121-b2c2-d3d75d7a1c95",
+                          "title": "Programa 2025"
+                      }
+                  ]
+                }
+              </code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button accordion-button-GET collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseTwo2"
+              aria-expanded="false"
+              aria-controls="panelsStayOpen-collapseTwo2"
+            >
+              Obtener actividades pertenecientes al plan
+            </button>
+          </h2>
+          <div
+            id="panelsStayOpen-collapseTwo2"
+            class="accordion-collapse collapse"
+          >
+            <div class="accordion-body">
+              <div class="row g-3">
+                <div class="col-auto">
+                  <button class="btn btn-success mb-3">GET</button>
+                </div>
+                <div class="col-10">
+                  <input
+                    type="url"
+                    class="form-control"
+                    value="{{base_url}}/api/activities-plan/{idPlan}"
+                    readonly
+                  />
+                </div>
+              </div>
+              <div class="row g-1">
+                <h6>Request</h6>
+                <p>Accept: application/json</p>
+                <h6>Response</h6>
+                <pre class="bg-body-secondary"><code class="json">
+                  {
+                    "data": [
+                        {
+                            "id": "9d2cc54a-2fa1-402f-b480-0fb4b857d1e0",
+                            "code_activity": "1",
+                            "description_activity": "Descripción Actividad 1"
+                        },
+                        {
+                            "id": "9d2cc54a-30d8-4206-9814-9bc4bbbe39cd",
+                            "code_activity": "2",
+                            "description_activity": "Descripción Actividad 2"
+                        }
+                    ]
+                  }
+              </code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button accordion-button-GET collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseThree2"
+              aria-expanded="false"
+              aria-controls="panelsStayOpen-collapseThree2"
+            >
+              Obtener tareas pertenecientes a la actividad
+            </button>
+          </h2>
+          <div
+            id="panelsStayOpen-collapseThree2"
+            class="accordion-collapse collapse"
+          >
+            <div class="accordion-body">
+              <div class="row g-3">
+                <div class="col-auto">
+                  <button class="btn btn-success mb-3">GET</button>
+                </div>
+                <div class="col-10">
+                  <input
+                    type="url"
+                    class="form-control"
+                    value="{{base_url}}/api/tasks-activity/{idActivity}"
+                    readonly
+                  />
+                </div>
+              </div>
+              <div class="row g-1">
+                <h6>Request</h6>
+                <p>Accept: application/json</p>
+                <h6>Response</h6>
+                <pre class="bg-body-secondary"><code class="json">
+                  {
+                    "data": [
+                        {
+                            "id": "9d2cc54a-3033-4cad-970b-3f3adf203c32",
+                            "code_task": "1.1",
+                            "description_task": "Descripción Tarea 1.1"
+                        },
+                        {
+                            "id": "9d356b2b-e6e3-4038-a73f-4c903b95c89c",
+                            "code_task": "1.2",
+                            "description_task": "Descripción Tarea 1.2"
+                        },
+                        {
+                            "id": "9d356b2b-ef41-450d-9f8c-efb5f8154008",
+                            "code_task": "1.3",
+                            "description_task": "Descripción Tarea 1.3"
+                        }
+                    ]
+                  }
+              </code></pre>
               </div>
             </div>
           </div>

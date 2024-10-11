@@ -542,6 +542,77 @@
             </div>
           </div>
         </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button accordion-button-GET collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseSeven"
+              aria-expanded="false"
+              aria-controls="panelsStayOpen-collapseSeven"
+            >
+              Actividad mensual de estados - Artículos
+            </button>
+          </h2>
+          <div
+            id="panelsStayOpen-collapseSeven"
+            class="accordion-collapse collapse"
+          >
+            <div class="accordion-body">
+              <div class="row g-3">
+                <div class="col-auto">
+                  <button class="btn btn-success mb-3">GET</button>
+                </div>
+                <div class="col-10">
+                  <input
+                    type="url"
+                    class="form-control"
+                    value="{{base_url}}/api/monthly-articles/{year}"
+                    readonly
+                  />
+                  <hr />
+                </div>
+              </div>
+              <div class="row g-1">
+                <h6>Request</h6>
+                <p>
+                  Accept: application/json <br />
+                  <strong>year : type integer</strong>
+                  - example: 2024
+                </p>
+                <h6>Response</h6>
+                Contador mensual de estados de artículos por año.
+                <pre class="bg-body-secondary"><code class="json">
+                  {
+                    "data": [
+                        {
+                            "status": "En desarrollo",
+                            "total_month": [0,2,0,2,0,0,0,5,0,8,0,1] // [enero,febrero,marzo,...]
+                        },
+                        {
+                            "status": "Revisado",
+                            "total_month": [7,0,0,0,2,0,2,0,1,2,0,1]
+                        },
+                        {
+                            "status": "Enviado a revista",
+                            "total_month": [0,0,0,0,0,1,0,7,0,0,0,2]
+                        },
+                        {
+                            "status": "Indexado",
+                            "total_month": [0,0,0,1,0,1,0,7,0,0,0,1]
+                        },
+                        {
+                            "status": "Pagado",
+                            "total_month": [0,0,1,0,0,1,0,7,0,0,2,0]
+                        }
+                    ]
+                }
+                </code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 

@@ -57,72 +57,84 @@
                 <h6>Body</h6>
                 <pre class="bg-body-secondary"><code class="json">
 {
-    "name_event": "test evento 2",
-    "description": "test description 2",
-    "start_date": "15-05-2024",
-    "end_date": "18-05-2024",
-    "place": "UCH",
-    "hour": "18:00",
-    "directed_at": "Docentes, Egresados",
-    "responsible": "Area de UDI",
-    // "rooms" : [], Cuando no se envía salones
-    "rooms": [
-        {
-            "moderator_id": "9d144981-7aef-443a-8a11-ae2164fdbec9",
-            "room_number": "401",
-            "description": "AULA DE ING",
-            "topics": [
-                {
-                    "title": "Ingeniería de SISTEMAS e Ingenieria 2",
-                    "authors": [
-                        {
-                            "author_id": "9d144981-d347-4f32-9950-6045f4d342e8"
-                        },
-                        {
-                            "author_id": "9d144981-b303-411e-865f-003010967123"
-                        }
-                    ]
-                },
-                {
-                    "title": "El Rol de la Inteligencia Artificial en la Optimización de los Procesos Logísticos: Un Estudio sobre el Impacto del Machine Learning en la Eficiencia Operacional de Grandes Corporacion",
-                    "authors": [
-                        {
-                            "author_id": "9d144981-6db0-4c6a-b963-a36350e08e94"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "moderator_id": "9d144981-5736-4517-bb10-1fd69a7c3883",
-            "room_number": "402",
-            "description": "AULA DE ING 2",
-            "topics": [
-                {
-                    "title": "Título de prueba 6",
-                    "authors": [
-                        {
-                            "author_id": "9d14491a-044b-4624-8954-3240d438603f"
-                        },
-                        {
-                            "author_id": "9d1448a4-9cc1-48af-a98e-b49baf4c698e"
-                        }
-                    ]
-                },
-                {
-                    "title": "Título de prueba 5",
-                    "authors": [
-                        {
-                            "author_id": "9d1448a4-9cc1-48af-a98e-b49baf4c698e"
-                        },
-                        {
-                            "author_id": "9d14491a-044b-4624-8954-3240d438603f"
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
+  "name_event": "test evento 2",
+  "description": "test description 2",
+  "start_date": "15-05-2024",
+  "end_date": "18-05-2024",
+  "place": "UCH",
+  "hour": "13:00",
+  "directed_at": "Docentes, Egresados",
+  "responsible": "Area de UDI",
+  // "rooms" : [], Cuando no se envía salones
+  "rooms": [
+      {
+          "moderator_id": "9d144981-7aef-443a-8a11-ae2164fdbec9",
+          "room_number": "401",
+          "start_time" : "13:00",
+          "end_time" : "18:00",
+          "description": "AULA DE ING",
+          "topics": [
+              {
+                  "title": "Ingeniería de SISTEMAS e Ingenieria 2",
+                  "start_time" : "13:00",
+                  "end_time" : "15:00",
+                  "authors": [
+                      {
+                          "author_id": "9d144981-d347-4f32-9950-6045f4d342e8"
+                      },
+                      {
+                          "author_id": "9d144981-b303-411e-865f-003010967123"
+                      }
+                  ]
+              },
+              {
+                  "title": "El Rol de la Inteligencia Artificial en la Optimización de los Procesos Logísticos: Un Estudio sobre el Impacto del Machine Learning en la Eficiencia Operacional de Grandes Corporacion",
+                  "start_time" : "15:00",
+                  "end_time" : "18:00",
+                  "authors": [
+                      {
+                          "author_id": "9d144981-6db0-4c6a-b963-a36350e08e94"
+                      }
+                  ]
+              }
+          ]
+      },
+      {
+          "moderator_id": "9d144981-5736-4517-bb10-1fd69a7c3883",
+          "room_number": "402",
+          "start_time" : "13:00",
+          "end_time" : "15:00",
+          "description": "AULA DE ING 2",
+          "topics": [
+              {
+                  "title": "Título de pruebaaaa 6",
+                  "start_time" : "13:00",
+                  "end_time" : "14:00",
+                  "authors": [
+                      {
+                          "author_id": "9d14491a-044b-4624-8954-3240d438603f"
+                      },
+                      {
+                          "author_id": "9d1448a4-9cc1-48af-a98e-b49baf4c698e"
+                      }
+                  ]
+              },
+              {
+                  "title": "Título de pruebaaaa 5",
+                  "start_time" : "14:00",
+                  "end_time" : "15:00",
+                  "authors": [
+                      {
+                          "author_id": "9d1448a4-9cc1-48af-a98e-b49baf4c698e"
+                      },
+                      {
+                          "author_id": "9d14491a-044b-4624-8954-3240d438603f"
+                      }
+                  ]
+              }
+          ]
+      }
+  ]
 }
                 </code></pre>
               </div>
@@ -166,124 +178,150 @@
                 <h6>Response</h6>
                 <pre class="bg-body-secondary"><code class="json">
 {
-    "data": [
-        {
-            "id": "9d518f09-5c77-4482-8a2d-c09b7111e5c3",
-            "name_event": "test evento 3",
-            "description": "test description 3",
-            "start_date": "15-05-2024",
-            "end_date": "18-05-2024",
-            "place": "UCH",
-            "hour": "18:00",
-            "directed_at": "Docentes, Egresados",
-            "responsible": "Area de UDI",
-            "created_at": "23-10-2024 21:16:16",
-            "rooms": [
-                {
-                    "id": "9d518f09-6c89-4c23-a4df-8253edd17229",
-                    "moderator": {
-                        "id": "9d144981-7aef-443a-8a11-ae2164fdbec9",
-                        "name": "Isaac",
-                        "surnames": "Carrasco",
-                        "code": 64565205,
-                        "email": "lola63@example.net",
-                        "phone": 291294722,
-                        "orcid": "harum",
-                        "cip": null
-                    },
-                    "room_number": "401",
-                    "description": "AULA DE ING",
-                    "created_at": "23-10-2024 21:16:16",
-                    "topics": [
-                        {
-                            "id": "9d518f09-71b9-4893-956c-3c4020d1c3f6",
-                            "title": "Ingeniería de SISTEMAS e Ingenieria 2",
-                            "authors": [
-                                {
-                                    "id": "9d518f5f-ecfb-48f4-8f5e-c2b7c7364fbc",
-                                    "author_id": "9d144981-88d9-4c1e-8a90-757c4c82041d",
-                                    "name": "Kevin",
-                                    "surnames": "Navarrete"
-                                },
-                                {
-                                    "id": "9d518f5f-fe0c-4f4e-b3ab-9805701a4ffa",
-                                    "author_id": "9d144981-b303-411e-865f-003010967123",
-                                    "name": "Daniel",
-                                    "surnames": "Muro"
-                                }
-                            ]
-                        },
-                        {
-                            "id": "9d518f09-7eac-4d1b-a38e-ef29d6fcc8d5",
-                            "title": "El Rol de la Inteligencia Artificial en la Optimización de los Procesos Logísticos: Un Estudio sobre el Impacto del Machine Learning en la Eficiencia Operacional de Grandes Corporacion",
-                            "authors": [
-                                {
-                                    "id": "9d518f60-0a90-4395-8204-5831a0091e8b",
-                                    "author_id": "9d144981-6db0-4c6a-b963-a36350e08e94",
-                                    "name": "Montserrat",
-                                    "surnames": "Salgado"
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "id": "9d518f09-86ef-4b67-a639-2cbc3f803d98",
-                    "moderator": {
-                        "id": "9d144981-5736-4517-bb10-1fd69a7c3883",
-                        "name": "María",
-                        "surnames": "Morenos",
-                        "code": 81048073,
-                        "email": "elias.montes2@example.com",
-                        "phone": 705189070,
-                        "orcid": "nihil",
-                        "cip": 45626815
-                    },
-                    "room_number": "402",
-                    "description": "AULA DE ING 2",
-                    "created_at": "23-10-2024 21:16:16",
-                    "topics": [
-                        {
-                            "id": "9d518f09-8adb-4f4f-8d67-5a8a09488d7e",
-                            "title": "Título de prueba 6",
-                            "authors": [
-                                {
-                                    "id": "9d518f60-1a65-4522-8bc2-9ed90f1a72fd",
-                                    "author_id": "9d14491a-044b-4624-8954-3240d438603f",
-                                    "name": "Cesar",
-                                    "surnames": "JAUREGUI SAAVEDRA"
-                                },
-                                {
-                                    "id": "9d518f60-1dfd-45b7-9a0d-5df8574c59e5",
-                                    "author_id": "9d1448a4-9cc1-48af-a98e-b49baf4c698e",
-                                    "name": "Cesar",
-                                    "surnames": "Saavedras"
-                                }
-                            ]
-                        },
-                        {
-                            "id": "9d518f09-9a87-4458-bc49-42741fd3d573",
-                            "title": "Título de prueba 5",
-                            "authors": [
-                                {
-                                    "id": "9d518f60-282a-4c81-aed5-ea4b7917d77c",
-                                    "author_id": "9d1448a4-9cc1-48af-a98e-b49baf4c698e",
-                                    "name": "Cesar",
-                                    "surnames": "Saavedras"
-                                },
-                                {
-                                    "id": "9d518f60-2ea2-4991-bf9d-65ce80e3707d",
-                                    "author_id": "9d14491a-044b-4624-8954-3240d438603f",
-                                    "name": "Cesar",
-                                    "surnames": "JAUREGUI SAAVEDRA"
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
+  "data": [
+      {
+          "id": "9d535b18-9946-4b64-8a5c-2a70eec78eae",
+          "name_event": "test evento 2",
+          "description": "test description 2",
+          "start_date": "15-05-2024",
+          "end_date": "18-05-2024",
+          "place": "UCH",
+          "hour": "13:00",
+          "directed_at": "Docentes, Egresados",
+          "responsible": "Area de UDI",
+          "created_at": "24-10-2024 18:42:43",
+          "rooms": [
+              {
+                  "id": "9d535b1b-723f-48ee-9ac4-8afd1d0010b2",
+                  "moderator": {
+                      "id": "9d144981-7aef-443a-8a11-ae2164fdbec9",
+                      "name": "Isaac",
+                      "surnames": "CarrascoSSS",
+                      "code": 64565205,
+                      "email": "lola63@example.net",
+                      "phone": 291294722,
+                      "orcid": "harum",
+                      "cip": null
+                  },
+                  "room_number": "401",
+                  "start_time": "13:00",
+                  "end_time": "17:00",
+                  "description": "AULA DE ING",
+                  "created_at": "24-10-2024 18:42:43",
+                  "topics": [
+                      {
+                          "id": "9d535b1b-76a9-4081-9198-d6660b41d806",
+                          "title": "Ingeniería de SISTEMAS e Ingenieria 2",
+                          "start_time": "13:00",
+                          "end_time": "15:00",
+                          "authors": [
+                              {
+                                  "id": "9d535b1b-7ae7-4c3d-8b2e-fd574532e393",
+                                  "author_id": "9d144981-d347-4f32-9950-6045f4d342e8",
+                                  "name": "Facundo",
+                                  "surnames": "Uribe",
+                                  "code": 38711549,
+                                  "email": "xhernandez@example.com"
+                              },
+                              {
+                                  "id": "9d535b1b-7d29-4664-ad7b-22b645997bb7",
+                                  "author_id": "9d144981-b303-411e-865f-003010967123",
+                                  "name": "Daniel",
+                                  "surnames": "Muro",
+                                  "code": 26860615,
+                                  "email": "jalicea@example.org"
+                              }
+                          ]
+                      },
+                      {
+                          "id": "9d535b1b-7f5f-4a1a-b077-94d6905324fa",
+                          "title": "El Rol de la Inteligencia Artificial en la Optimización de los Procesos Logísticos: Un Estudio sobre el Impacto del Machine Learning en la Eficiencia Operacional de Grandes Corporacion",
+                          "start_time": "15:00",
+                          "end_time": "17:00",
+                          "authors": [
+                              {
+                                  "id": "9d535b1b-81b4-4435-a500-4fdf77fca236",
+                                  "author_id": "9d144981-6db0-4c6a-b963-a36350e08e94",
+                                  "name": "Montserrat",
+                                  "surnames": "Salgado",
+                                  "code": 96759881,
+                                  "email": "cordero.jose1@example.net"
+                              }
+                          ]
+                      }
+                  ]
+              },
+              {
+                  "id": "9d535b1b-83fb-4c52-9233-42d70687e3f4",
+                  "moderator": {
+                      "id": "9d144981-5736-4517-bb10-1fd69a7c3883",
+                      "name": "María",
+                      "surnames": "Morenos",
+                      "code": 81048073,
+                      "email": "elias.montes2@example.com",
+                      "phone": 705189070,
+                      "orcid": "nihil",
+                      "cip": 45626815
+                  },
+                  "room_number": "402",
+                  "start_time": "13:00",
+                  "end_time": "15:00",
+                  "description": "AULA DE ING 2",
+                  "created_at": "24-10-2024 18:42:43",
+                  "topics": [
+                      {
+                          "id": "9d535b1b-8733-4524-8cdb-79f0c779dc4d",
+                          "title": "Título de pruebaaaa 6",
+                          "start_time": "13:00",
+                          "end_time": "14:00",
+                          "authors": [
+                              {
+                                  "id": "9d535b1b-8af1-438a-affe-4416d0f7098a",
+                                  "author_id": "9d14491a-044b-4624-8954-3240d438603f",
+                                  "name": "CESaaaaaR",
+                                  "surnames": "JAUREGUI SAAVEDRA",
+                                  "code": 12161658,
+                                  "email": "eliass.montes@example.com"
+                              },
+                              {
+                                  "id": "9d535b1b-8e73-40a9-aadd-a0124c46c5af",
+                                  "author_id": "9d1448a4-9cc1-48af-a98e-b49baf4c698e",
+                                  "name": "Cesar",
+                                  "surnames": "Saavedraaas",
+                                  "code": 121616581,
+                                  "email": "Felix1@test.com"
+                              }
+                          ]
+                      },
+                      {
+                          "id": "9d535b1b-920b-4a01-9a1a-7c781b3ff6c6",
+                          "title": "Título de pruebaaaa 5",
+                          "start_time": "14:00",
+                          "end_time": "15:00",
+                          "authors": [
+                              {
+                                  "id": "9d535b1b-962d-4ad1-9d29-778a919c1e52",
+                                  "author_id": "9d1448a4-9cc1-48af-a98e-b49baf4c698e",
+                                  "name": "Cesar",
+                                  "surnames": "Saavedraaas",
+                                  "code": 121616581,
+                                  "email": "Felix1@test.com"
+                              },
+                              {
+                                  "id": "9d535b1b-99be-479e-889d-b4e67d6e3e21",
+                                  "author_id": "9d14491a-044b-4624-8954-3240d438603f",
+                                  "name": "CESaaaaaR",
+                                  "surnames": "JAUREGUI SAAVEDRA",
+                                  "code": 12161658,
+                                  "email": "eliass.montes@example.com"
+                              }
+                          ]
+                      }
+                  ]
+              }
+          ]
+      }
+  ]
 }       
                 </code></pre>
               </div>
@@ -330,90 +368,99 @@
                   class="bg-body-secondary"
                 >//Si en caso se agrega un nuevo registro (rooms, topics o authors), no mandar id ya que es un registro nuevo<code class="json">
 {
-    "name_event": "test evento 3",
-    "description": "test description 3",
-    "start_date": "15-05-2024",
-    "end_date": "18-05-2024",
-    "place": "UCH",
-    "hour": "18:00",
-    "directed_at": "Docentes, Egresados",
-    "responsible": "Area de UDI",
-    "created_at": "23-10-2024 21:16:16",
-    "rooms": [
-        {
-            "id": "9d518f09-6c89-4c23-a4df-8253edd17229",
-            "moderator_id": "9d144981-7aef-443a-8a11-ae2164fdbec9",
-            "room_number": "401",
-            "description": "AULA DE ING",
-            "created_at": "23-10-2024 21:16:16",
-            "topics": [
-                {
-                    "id": "9d518f09-71b9-4893-956c-3c4020d1c3f6",
-                    "title": "Ingeniería de SISTEMAS e Ingenieria 2",
-                    "authors": [
-                        {
-                            "id": "9d518f5f-ecfb-48f4-8f5e-c2b7c7364fbc",
-                            "author_id": "9d144981-88d9-4c1e-8a90-757c4c82041d"
-                        },
-                        {
-                            "id": "9d518f5f-fe0c-4f4e-b3ab-9805701a4ffa",
-                            "author_id": "9d144981-b303-411e-865f-003010967123"
-                        },
-                        { //Nuevo Registro
-                            "author_id": "9d144981-6db0-4c6a-b963-a36350e08e94"
-                        }
-                    ]
-                },
-                {
-                    "id": "9d518f09-7eac-4d1b-a38e-ef29d6fcc8d5",
-                    "title": "El Rol de la Inteligencia Artificial en la Optimización de los Procesos Logísticos: Un Estudio sobre el Impacto del Machine Learning en la Eficiencia Operacional de Grandes Corporacion",
-                    "authors": [
-                        {
-                            "id": "9d518f60-0a90-4395-8204-5831a0091e8b",
-                            "author_id": "9d144981-6db0-4c6a-b963-a36350e08e94"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "id": "9d518f09-86ef-4b67-a639-2cbc3f803d98",
-            "moderator_id": "9d144981-5736-4517-bb10-1fd69a7c3883",
-            "room_number": "402",
-            "description": "AULA DE ING 2",
-            "created_at": "23-10-2024 21:16:16",
-            "topics": [
-                {
-                    "id": "9d518f09-8adb-4f4f-8d67-5a8a09488d7e",
-                    "title": "Título de prueba 6",
-                    "authors": [
-                        {
-                            "id": "9d518f60-1a65-4522-8bc2-9ed90f1a72fd",
-                            "author_id": "9d14491a-044b-4624-8954-3240d438603f"
-                        },
-                        {
-                            "id": "9d518f60-1dfd-45b7-9a0d-5df8574c59e5",
-                            "author_id": "9d1448a4-9cc1-48af-a98e-b49baf4c698e"
-                        }
-                    ]
-                },
-                {
-                    "id": "9d518f09-9a87-4458-bc49-42741fd3d573",
-                    "title": "Título de prueba 5",
-                    "authors": [
-                        {
-                            "id": "9d518f60-282a-4c81-aed5-ea4b7917d77c",
-                            "author_id": "9d1448a4-9cc1-48af-a98e-b49baf4c698e"
-                        },
-                        {
-                            "id": "9d518f60-2ea2-4991-bf9d-65ce80e3707d",
-                            "author_id": "9d14491a-044b-4624-8954-3240d438603f"
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
+  "name_event": "test evento 2",
+  "description": "test description 2",
+  "start_date": "15-05-2024",
+  "end_date": "18-05-2024",
+  "place": "UCH",
+  "hour": "13:00",
+  "directed_at": "Docentes, Egresados",
+  "responsible": "Area de UDI",
+  "created_at": "24-10-2024 18:42:43",
+  "rooms": [
+      {
+          "id": "9d535b1b-723f-48ee-9ac4-8afd1d0010b2",
+          "moderator_id": "9d144981-7aef-443a-8a11-ae2164fdbec9",
+          "room_number": "401",
+          "start_time": "13:00",
+          "end_time": "17:00",
+          "description": "AULA DE ING",
+          "created_at": "24-10-2024 18:42:43",
+          "topics": [
+              {
+                  "id": "9d535b1b-76a9-4081-9198-d6660b41d806",
+                  "title": "Ingeniería de SISTEMAS e Ingenieria 2",
+                  "start_time": "13:00",
+                  "end_time": "15:00",
+                  "authors": [
+                      {
+                          "id": "9d535b1b-7ae7-4c3d-8b2e-fd574532e393",
+                          "author_id": "9d144981-d347-4f32-9950-6045f4d342e8"
+                      },
+                      {
+                          "id": "9d535b1b-7d29-4664-ad7b-22b645997bb7",
+                          "author_id": "9d144981-b303-411e-865f-003010967123"
+                      }
+                  ]
+              },
+              {
+                  "id": "9d535b1b-7f5f-4a1a-b077-94d6905324fa",
+                  "title": "El Rol de la Inteligencia Artificial en la Optimización de los Procesos Logísticos: Un Estudio sobre el Impacto del Machine Learning en la Eficiencia Operacional de Grandes Corporacion",
+                  "start_time": "15:00",
+                  "end_time": "17:00",
+                  "authors": [
+                      {
+                          "id": "9d535b1b-81b4-4435-a500-4fdf77fca236",
+                          "author_id": "9d144981-6db0-4c6a-b963-a36350e08e94"
+                      }
+                  ]
+              }
+          ]
+      },
+      {
+          "id": "9d535b1b-83fb-4c52-9233-42d70687e3f4",
+          "moderator_id": "9d144981-5736-4517-bb10-1fd69a7c3883",
+          "room_number": "402",
+          "start_time": "13:00",
+          "end_time": "15:00",
+          "description": "AULA DE ING 2",
+          "created_at": "24-10-2024 18:42:43",
+          "topics": [
+              {
+                  "id": "9d535b1b-8733-4524-8cdb-79f0c779dc4d",
+                  "title": "Título de pruebaaaa 6",
+                  "start_time": "13:00",
+                  "end_time": "14:00",
+                  "authors": [
+                      {
+                          "id": "9d535b1b-8af1-438a-affe-4416d0f7098a",
+                          "author_id": "9d14491a-044b-4624-8954-3240d438603f"
+                      },
+                      {
+                          "id": "9d535b1b-8e73-40a9-aadd-a0124c46c5af",
+                          "author_id": "9d1448a4-9cc1-48af-a98e-b49baf4c698e"
+                      }
+                  ]
+              },
+              {
+                  "id": "9d535b1b-920b-4a01-9a1a-7c781b3ff6c6",
+                  "title": "Título de pruebaaaa 5",
+                  "start_time": "14:00",
+                  "end_time": "15:00",
+                  "authors": [
+                      {
+                          "id": "9d535b1b-962d-4ad1-9d29-778a919c1e52",
+                          "author_id": "9d1448a4-9cc1-48af-a98e-b49baf4c698e"
+                      },
+                      {
+                          "id": "9d535b1b-99be-479e-889d-b4e67d6e3e21",
+                          "author_id": "9d14491a-044b-4624-8954-3240d438603f"
+                      }
+                  ]
+              }
+          ]
+      }
+  ]
 }
                 </code></pre>
               </div>

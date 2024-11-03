@@ -158,19 +158,25 @@
                 <p>Accept: application/json</p>
                 <h6>Response</h6>
                 <pre class="bg-body-secondary"><code class="json">
-                    {
-                        "data": {
+                  {
+                    "data": [
+                        {
                             "id": "9d55949a-9adc-42dd-a0de-3ba21662eed1",
                             "procedure_type": "INSCRIPCION DE PROYECTO DE TESIS O TRABAJO DE INVESTIGACION",
                             "applicant": {
+                                "id": "9d145c8e-5050-4228-b06e-bb2e1f8352f4",
                                 "name": "Emma",
-                                "surnames": "Saldaña"
+                                "surnames": "Saldaña",
+                                "email": "arguello.hidalgo@example.com",
+                                "phone": 721100087,
+                                "code": 30746901
                             },
                             "description": "El egresado solicita una asesoría complementaría",
                             "status": "En proceso",
                             "created_at": "25-10-2024 21:15:09"
                         }
-                    }          
+                    ]
+                  }         
                 </code></pre>
               </div>
             </div>
@@ -312,6 +318,12 @@
             </div>
           </div>
         </div>
+      </div>
+      <hr />
+      <div class="alert alert-dark" role="alert">
+        <h5>Tipo de Trámites</h5>
+      </div>
+      <div class="accordion" id="accordionPanelsStayOpenArchive">
         <div class="accordion-item">
           <h2 class="accordion-header">
             <button
@@ -382,7 +394,7 @@
                   <input
                     type="url"
                     class="form-control"
-                    value="{{base_url}}/api/allprocedure-types"
+                    value="{{base_url}}/api/procedure-type"
                     readonly
                   />
                 </div>
@@ -412,6 +424,140 @@
                             }
                         ]
                     }          
+                </code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button accordion-button-GET collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseSeven2"
+              aria-expanded="false"
+              aria-controls="panelsStayOpen-collapseSeven2"
+            >
+              Obtener todos tipo de trámite por ID
+            </button>
+          </h2>
+          <div
+            id="panelsStayOpen-collapseSeven2"
+            class="accordion-collapse collapse"
+          >
+            <div class="accordion-body">
+              <div class="row g-3">
+                <div class="col-auto">
+                  <button class="btn btn-success mb-3">GET</button>
+                </div>
+                <div class="col-10">
+                  <input
+                    type="url"
+                    class="form-control"
+                    value="{{base_url}}/api/procedure-type/{idProcedureType}"
+                    readonly
+                  />
+                </div>
+              </div>
+              <div class="row g-1">
+                <h6>Request</h6>
+                <p>Accept: application/json</p>
+                <h6>Response</h6>
+                <pre class="bg-body-secondary"><code class="json">
+                    {
+                      "data": {
+                          "id": "9d557678-b5c1-4f0a-a79e-603688a7341d",
+                          "procedure_type": "ASESORÍA DE TESIS COMPLEMENTARIA",
+                          "created_at": "2024-10-26T00:50:56.000000Z",
+                          "updated_at": "2024-10-26T00:50:56.000000Z"
+                      }
+                    }          
+                </code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button accordion-button-PUT collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseFour2"
+              aria-expanded="false"
+              aria-controls="panelsStayOpen-collapseFour2"
+            >
+              Actualizar un tipo de trámite
+            </button>
+          </h2>
+          <div
+            id="panelsStayOpen-collapseFour2"
+            class="accordion-collapse collapse"
+          >
+            <div class="accordion-body">
+              <div class="row g-3">
+                <div class="col-auto">
+                  <button class="btn btn-primary mb-3">PUT</button>
+                </div>
+                <div class="col-10">
+                  <input
+                    type="url"
+                    class="form-control"
+                    value="{{base_url}}/api/procedure-type/{idProcedureType}"
+                    readonly
+                  />
+                </div>
+              </div>
+              <div class="row g-1">
+                <h6>Request</h6>
+                <p>Accept: application/json</p>
+                <h6>Body</h6>
+                <pre class="bg-body-secondary"><code class="json">
+                  {
+                    "procedure_type" : "INSCRIPCION DE PROYECTO DE TESIS O TRABAJO DE INVESTIGACION 7"
+                  }
+                </code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button accordion-button-DELETE collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseFive2"
+              aria-expanded="false"
+              aria-controls="panelsStayOpen-collapseFive2"
+            >
+              Eliminar un tipo de trámite
+            </button>
+          </h2>
+          <div
+            id="panelsStayOpen-collapseFive2"
+            class="accordion-collapse collapse"
+          >
+            <div class="accordion-body">
+              <div class="row g-3">
+                <div class="col-auto">
+                  <button class="btn btn-danger mb-3">DELETE</button>
+                </div>
+                <div class="col-10">
+                  <input
+                    type="url"
+                    class="form-control"
+                    value="{{base_url}}/api/procedure-type/{idProcedureType}"
+                    readonly
+                  />
+                </div>
+              </div>
+              <div class="row g-1">
+                <h6>Request</h6>
+                <p>Accept: application/json</p>
+                <h6>Response</h6>
+                <pre class="bg-body-secondary"><code class="json">
                 </code></pre>
               </div>
             </div>

@@ -310,6 +310,62 @@
         <div class="accordion-item">
           <h2 class="accordion-header">
             <button
+              class="accordion-button accordion-button-POST"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseOne1"
+              aria-expanded="true"
+              aria-controls="panelsStayOpen-collapseOne1"
+            >
+              Cambiar contraseña usuario (Perfil)
+            </button>
+          </h2>
+          <div
+            id="panelsStayOpen-collapseOne1"
+            class="accordion-collapse collapse"
+          >
+            <div class="accordion-body">
+              <div class="row g-3">
+                <div class="col-auto">
+                  <button class="btn btn-warning mb-3">POST</button>
+                </div>
+                <div class="col-10">
+                  <input
+                    type="url"
+                    class="form-control"
+                    value="{{base_url}}/api/users/{idUser}/reset"
+                    readonly
+                  />
+                </div>
+              </div>
+              <div class="row g-1">
+                <h6>Request</h6>
+                <p>Accept: application/json</p>
+                <pre>
+                  Para la actualización de contraseñas, se deben cumplir con los
+                  siguiente requisitos: 
+                  - Un tamaño mínimo de 8 caracteres. 
+                  - Requiere al menos una letra mayúscula y una minúscula. 
+                  - Requiere al menos una letra. 
+                  - Requiere al menos un número. 
+                  - Requiere al menos un símbolo. 
+                  - No debería haberse visto comprometida en filtraciones de datos.</pre
+                >
+                <h6>Body</h6>
+                <pre class="bg-body-secondary"><code class="json">
+        {
+          "current_password": "TNQiyiATeUAawu5R@",
+          "password": "TNQiyiATeUAaw@@",
+          "password_confirmation": "TNQiyiATeUAaw@@"
+        }
+                </code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
               class="accordion-button accordion-button-DELETE collapsed"
               type="button"
               data-bs-toggle="collapse"

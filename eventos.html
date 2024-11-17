@@ -330,7 +330,192 @@
             </div>
           </div>
         </div>
-
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button accordion-button-GET collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseTwo2"
+              aria-expanded="false"
+              aria-controls="panelsStayOpen-collapseTwo2"
+            >
+              Obtener un evento por ID
+            </button>
+          </h2>
+          <div
+            id="panelsStayOpen-collapseTwo2"
+            class="accordion-collapse collapse"
+          >
+            <div class="accordion-body">
+              <div class="row g-3">
+                <div class="col-auto">
+                  <button class="btn btn-success mb-3">GET</button>
+                </div>
+                <div class="col-10">
+                  <input
+                    type="url"
+                    class="form-control"
+                    value="{{base_url}}/api/event/{idEvent}"
+                    readonly
+                  />
+                </div>
+              </div>
+              <div class="row g-1">
+                <h6>Request</h6>
+                <p>Accept: application/json</p>
+                <h6>Response</h6>
+                <pre class="bg-body-secondary"><code class="json">
+    {
+      "data": {
+          "id": "9d81bac3-1cfd-4d82-aafb-c60764735e1c",
+          "name_event": "test evento 2",
+          "description": "test description 2",
+          "start_date": "15-05-2024",
+          "end_date": "18-05-2024",
+          "place": "UCH",
+          "start_time": "12:00",
+          "end_time": "16:00",
+          "directed_at": "Docentes, Egresados",
+          "responsible": "Area de UDI",
+          "created_at": "16-11-2024 19:58:16",
+          "rooms": [
+              {
+                  "id": "9d834c95-b803-442d-917f-61bc74bd9765",
+                  "moderator": {
+                      "id": "9d144981-5736-4517-bb10-1fd69a7c3883",
+                      "name": "Rocio",
+                      "surnames": "Morenos",
+                      "code": 81048073,
+                      "email": "elias.montes2@example.com",
+                      "phone": 705189070,
+                      "orcid": "nihil",
+                      "cip": 45626815
+                  },
+                  "room_number": "402",
+                  "start_time": "13:00",
+                  "end_time": "15:00",
+                  "description": "AULA DE ING 2",
+                  "created_at": "17-11-2024 14:41:51",
+                  "topics": [
+                      {
+                          "id": "9d834c95-b974-45af-9f9e-1f2e58b47ab3",
+                          "title": "Título de pruebaaaa 6",
+                          "start_time": "13:00",
+                          "end_time": "14:00",
+                          "authors": [
+                              {
+                                  "id": "9d834c95-bb0d-4cf2-a19d-608995c9bed7",
+                                  "author_id": "9d14491a-044b-4624-8954-3240d438603f",
+                                  "name": "Cesar",
+                                  "surnames": "Jauregui Saavedra",
+                                  "code": 12161658,
+                                  "email": "elias.montes@example.com"
+                              },
+                              {
+                                  "id": "9d834c95-bbea-4b9b-ac24-9f486e2e1317",
+                                  "author_id": "9d1448a4-9cc1-48af-a98e-b49baf4c698e",
+                                  "name": "Cesara",
+                                  "surnames": "Saavedraaas",
+                                  "code": 12161611,
+                                  "email": "Felix@test.com"
+                              }
+                          ]
+                      },
+                      {
+                          "id": "9d834c95-bccb-4362-9897-287f6b9159dd",
+                          "title": "Título de pruebaaaa 5",
+                          "start_time": "14:00",
+                          "end_time": "15:00",
+                          "authors": [
+                              {
+                                  "id": "9d834c95-be27-4f99-8f7a-13fbe1bc0f87",
+                                  "author_id": "9d1448a4-9cc1-48af-a98e-b49baf4c698e",
+                                  "name": "Cesara",
+                                  "surnames": "Saavedraaas",
+                                  "code": 12161611,
+                                  "email": "Felix@test.com"
+                              },
+                              {
+                                  "id": "9d834c95-bf22-4369-8c46-c26cc0552379",
+                                  "author_id": "9d14491a-044b-4624-8954-3240d438603f",
+                                  "name": "Cesar",
+                                  "surnames": "Jauregui Saavedra",
+                                  "code": 12161658,
+                                  "email": "elias.montes@example.com"
+                              }
+                          ]
+                      }
+                  ]
+              },
+              {
+                  "id": "9d834dd6-200c-4c33-bdf9-de45c3c438e2",
+                  "moderator": {
+                      "id": "9d144981-7aef-443a-8a11-ae2164fdbec9",
+                      "name": "Isaac",
+                      "surnames": "CarrascoSSS",
+                      "code": 64565205,
+                      "email": "lola63@example.net",
+                      "phone": 291294722,
+                      "orcid": "harum",
+                      "cip": null
+                  },
+                  "room_number": "401",
+                  "start_time": "13:00",
+                  "end_time": "17:00",
+                  "description": "AULA DE ING",
+                  "created_at": "17-11-2024 14:45:21",
+                  "topics": [
+                      {
+                          "id": "9d834dd6-2a7e-4a3e-ade5-2bd12dfe6a6b",
+                          "title": "Ingeniería de SISTEMAS e Ingenieria 2",
+                          "start_time": "13:00",
+                          "end_time": "15:00",
+                          "authors": [
+                              {
+                                  "id": "9d834dd6-2cfe-4361-bfa1-28375831fc9f",
+                                  "author_id": "9d144981-d347-4f32-9950-6045f4d342e8",
+                                  "name": "Facundo",
+                                  "surnames": "Uribe",
+                                  "code": 38711549,
+                                  "email": "xhernandez@example.com"
+                              },
+                              {
+                                  "id": "9d834dd6-2ef1-4db8-acb6-c2b09f8ed13b",
+                                  "author_id": "9d144981-b303-411e-865f-003010967123",
+                                  "name": "Daniel",
+                                  "surnames": "Muro",
+                                  "code": 26860615,
+                                  "email": "jalicea@example.org"
+                              }
+                          ]
+                      },
+                      {
+                          "id": "9d834dd6-308f-4c42-9ccc-9d2baaba30ae",
+                          "title": "El Rol de la Inteligencia Artificial en la Optimización de los Procesos Logísticos: Un Estudio sobre el Impacto del Machine Learning en la Eficiencia Operacional de Grandes Corporacion",
+                          "start_time": "15:00",
+                          "end_time": "17:00",
+                          "authors": [
+                              {
+                                  "id": "9d834dd6-33df-4173-873d-be1f22ee625f",
+                                  "author_id": "9d144981-6db0-4c6a-b963-a36350e08e94",
+                                  "name": "Montserrat",
+                                  "surnames": "Salgado",
+                                  "code": 96759881,
+                                  "email": "cordero.jose1@example.net"
+                              }
+                          ]
+                      }
+                  ]
+              }
+          ]
+      }
+  }       
+                </code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="accordion-item">
           <h2 class="accordion-header">
             <button
